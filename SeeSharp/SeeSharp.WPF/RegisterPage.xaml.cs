@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace SeeSharp.WPF
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for RegisterPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class RegisterPage : UserControl
     {
-        public MainWindow()
+        public RegisterPage()
         {
             InitializeComponent();
         }

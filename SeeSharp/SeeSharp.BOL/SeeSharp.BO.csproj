@@ -40,13 +40,66 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dictionaries\AppSettingsDictionary.cs" />
+    <Compile Include="Dictionaries\ExceptionDictionary.cs" />
+    <Compile Include="Dictionaries\GreetingsDictionary.cs" />
+    <Compile Include="Dictionaries\NavigationDictionary.cs" />
+    <Compile Include="Dictionaries\PageDictionary.cs" />
+    <Compile Include="Infrastructure\ResourceManagerFactory.cs" />
+    <Compile Include="Managers\AchivmentManager.cs" />
+    <Compile Include="Managers\CuriositiesManager.cs" />
+    <Compile Include="Managers\GreetingsManager.cs" />
+    <Compile Include="Managers\ModuleManager.cs" />
+    <Compile Include="Managers\UserManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\AppSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppSettings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Curiosities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Curiosities.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Exception.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Exception.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Greetings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Greetings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Page.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Page.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Dictionaries\" />
-    <Folder Include="Infrastructure\" />
-    <Folder Include="Managers\" />
-    <Folder Include="Resources\" />
+    <EmbeddedResource Include="Resources\AppSettings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppSettings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Curiosities.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Curiosities.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Exception.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Exception.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Greetings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Greetings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Page.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Page.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

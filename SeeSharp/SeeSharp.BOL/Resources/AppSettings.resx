@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AchivmentImageDirectory" xml:space="preserve">
+    <value>Images/Achivments/{0}</value>
+  </data>
+  <data name="AppVersion" xml:space="preserve">
+    <value>1.0</value>
+  </data>
+  <data name="CheckMark" xml:space="preserve">
+    <value>✓</value>
+  </data>
+  <data name="HelloWorld" xml:space="preserve">
+    <value>using System;
+namespace HelloWorld
+{
+    public class Hello 
+    {
+        public static void Main() 
+        {
+            Console.WriteLine("Hello World!");
+        }
+    }
+}</value>
+  </data>
+  <data name="JavaScriptAlert" xml:space="preserve">
+    <value>alert('{0}');</value>
+  </data>
+  <data name="PercentagePattern" xml:space="preserve">
+    <value>{0} %</value>
+  </data>
+  <data name="ProgramFilesDirectory" xml:space="preserve">
+    <value>/Content/Samples/{0}.txt</value>
+  </data>
+  <data name="RandomText" xml:space="preserve">
+    <value>Przejrzystość nowym ledwo Worończańskim osoby przez zwierciadlanéj. Pokrewieństwem najwymowniejsza jezior orzeł zwierciadlanéj Wystrzeliliśmy Lubił przejrzystość Przedstawiając Majora młoda. Najpiękniejszym żołniersczyzny Niesiołowskiemu wola tace nierostrzygniony syna moje Kościuszkowskie. Bębna Podkomorzym mgłą ciżby czasie pewnością można przysłowie powiatowém uszaki bitwie. Uprzyjemnić cicha cudna śnie Przed szlacheckich najwyższych zdradzieckim ręka. Zdał Kulturze Brał kawiarka czernił dziwo oboje Gdzie faworyty tyłu. 
+
+Potém Jerzym Doszli przestępując wyciągniętą rozmaitością osobna dałem placka niezwyczajnéj rostrzygnienie. Albo tyla Białopiotrowiczem zły okno jego kuca. Ludem była pilni Czyli Najpiękniejszego Rzeczypospolitéj najpiękniejszéj Latem okiem myśl. Polu Gors wali najpiękniejszéj Rzeczypospolitéj Lecz Najpiękniejszego. Niezżętéj częstokroć zbyt téj zaciągnąć plan Jest Jéj wiek lubi służącéj. Rzuca Pamiętam niegadał mocno Chłopiec Kolor Ledwo bratu Drewniany wolę nietrudno pilni rospięta. Ledwie nierostrzygniony grała Trudno nędzy Która najpiękniejszym niźli Niesiołowskiemu napój Kościuszkowskie Sprawa. Izbie promieni panny święta bramy idącego ławy Nawet Wilna łono silne. 
+
+Ryby się lisa gdym najpiękniejszéj Najpiękniejszego Dać Rzeczypospolitéj. Obaczy zdały Takich niespodzianie zagnieździł potrząsając gazety Wykrzykników Nazywa nocną. Twoja swém Napoleonem przestanku baczności innym rachunków Austerlitz Praga szklankami. Zostawioném zastępstwie przeznaczono Mój sine uprzyjemnić mosiężnemi brat ptak przechodniom. Śmie puściliśmy poróżnieni mogę przedmiotach krakowskiéj spór czyli Gdyby przysłonił chude żalu. Grad nikt Białopiotrowiczem pole Zaś moje szyb mami źle. Pokoju drugim zacietrzewiony córki wolał Pełen Dziwna szczególniéj zaczerwienione blizny przestępując małą. Ożył bogata kaptur jakich wolnym. Posiekany zwany kryć wieścią szali tkany Uwiązany Stary wzroście.</value>
+  </data>
+  <data name="SectionPrefixPattern" xml:space="preserve">
+    <value>Jesteś w sekcji: {0}</value>
+  </data>
+  <data name="ShowPercentage" xml:space="preserve">
+    <value>{0} %</value>
+  </data>
+  <data name="TextDirectory" xml:space="preserve">
+    <value>/Content/MovieText/{0}.txt</value>
+  </data>
+  <data name="UnloggedAlert" xml:space="preserve">
+    <value>Niezalogowany</value>
+  </data>
+  <data name="VersionMessagePattern" xml:space="preserve">
+    <value>Wersja: {0}</value>
+  </data>
+  <data name="VideoDirectory" xml:space="preserve">
+    <value>/Content/MovieCourses/{0}.mp4</value>
+  </data>
+  <data name="XmlFileDirectory" xml:space="preserve">
+    <value>XmlFiles</value>
+  </data>
+</root>
