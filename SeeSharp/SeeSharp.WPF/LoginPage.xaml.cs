@@ -31,7 +31,7 @@ namespace SeeSharp.WPF
             {
                 string loginName = this.LoginBox.Text;
                 string loginCode = this.CodeBox.Text;
-                MainPage root = (MainPage)System.Windows.Application.Current.MainWindow;
+                MainPage root = ViewFactory.MainPageInstance;
                 ServerServiceClient serverService = ServerServiceClient.GetInstance();
 
                 if (string.IsNullOrEmpty(loginName) || string.IsNullOrEmpty(loginCode))

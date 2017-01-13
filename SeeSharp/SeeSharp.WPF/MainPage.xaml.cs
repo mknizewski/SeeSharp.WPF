@@ -6,13 +6,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace SeeSharp.WPF
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainPage : Window
+    public partial class MainPage : UserControl
     {
         public UserManager UserManager;
 
@@ -23,6 +24,7 @@ namespace SeeSharp.WPF
 
             this.AppVersion.Text = string.Format(AppSettingsDictionary.AppVersionMessagePattern, AppSettingsDictionary.AppVersion);
         }
+
 
         private void AboutAuthors_Click(object sender, RoutedEventArgs e)
         {
@@ -67,10 +69,10 @@ namespace SeeSharp.WPF
         {
             UserControl view = ViewFactory.GetView(viewType);
 
-            this.DynamicView.Children.Clear();
-            this.DynamicView.Children.Add(view);
+            this.DynamicView.Content = view;
 
             this.SectionBlock.Text = string.Format(AppSettingsDictionary.SectionPrefixPattern, section);
+            this.LayoutRoot.UpdateLayout();
         }
 
         public void SetAlert(string message)
@@ -101,8 +103,7 @@ namespace SeeSharp.WPF
         {
             UserControl modulePage = ViewFactory.GetModule(tag);
 
-            this.DynamicView.Children.Clear();
-            this.DynamicView.Children.Add(modulePage);
+            this.DynamicView.Content = modulePage;
             this.DynamicView.UpdateLayout();
         }
 

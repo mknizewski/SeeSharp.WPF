@@ -29,8 +29,6 @@ namespace SeeSharp.WPF
             Grid grid = new Grid();
             MainPage mainPage = new MainPage();
             ViewFactory.MainPageInstance = mainPage;
-
-            this.MainWindow = mainPage;
         }
 
         private void ConfigureApp()
