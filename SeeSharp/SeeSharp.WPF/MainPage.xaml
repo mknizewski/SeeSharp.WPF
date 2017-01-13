@@ -159,12 +159,7 @@
                     <Viewbox Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Top" x:Name="ProgressTextViewBox" Visibility="Collapsed">
                         <TextBlock Text="Postęp ukończenia:" Margin="0 20 0 0" FontFamily="Open Sans" FontSize="24"></TextBlock>
                     </Viewbox>
-                    <Viewbox Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="ProgressCircleViewBox" Visibility="Collapsed">
-                        <Grid>
-                            
-                        </Grid>
-                    </Viewbox>
-                    <Viewbox Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Top" x:Name="ProgressPercentageViewBox" Visibility="Collapsed">
+                    <Viewbox Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" x:Name="ProgressPercentageViewBox" Visibility="Collapsed">
                         <TextBlock x:Name="ProgressPercentageTextBlock" FontFamily="Open Sans" FontSize="24" />
                     </Viewbox>
                 </Grid>

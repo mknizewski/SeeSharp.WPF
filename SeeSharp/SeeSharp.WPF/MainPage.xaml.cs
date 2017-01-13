@@ -116,7 +116,6 @@ namespace SeeSharp.WPF
                 this.LoginButtonMenu.Visibility = Visibility.Collapsed;
 
                 this.ProgressTextViewBox.Visibility = Visibility.Visible;
-                this.ProgressCircleViewBox.Visibility = Visibility.Visible;
                 this.ProgressPercentageTextBlock.Visibility = Visibility.Visible;
                 this.ProgressPercentageViewBox.Visibility = Visibility.Visible;
 
@@ -130,7 +129,6 @@ namespace SeeSharp.WPF
                 this.RegisterButtonMenu.Visibility = Visibility.Visible;
 
                 this.ProgressTextViewBox.Visibility = Visibility.Collapsed;
-                this.ProgressCircleViewBox.Visibility = Visibility.Collapsed;
                 this.ProgressPercentageViewBox.Visibility = Visibility.Collapsed;
                 this.ProgressPercentageTextBlock.Visibility = Visibility.Collapsed;
 

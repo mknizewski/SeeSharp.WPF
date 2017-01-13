@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -35,7 +36,7 @@ namespace SeeSharp.WPF
         {
             this._moduleManager = ModuleManager.GetModuleManager(tag);
             this._isFullScreen = false;
-
+            
             InitializeComponent();
             InitializeView();
             InitializeModule();
@@ -146,11 +147,10 @@ namespace SeeSharp.WPF
             this.media.MediaOpened += this.MediaOpened;
             this.media.MediaFailed += this.MediaFailed;
             //this.media.CurrentStateChanged += this.MediaCurrentStateChanged;
-
+            
             this._viewModel.PositionChanged += PositionChanged;
             //this.media.DownloadProgressChanged += (s, e) => this.UpdateBufferBar();
 
-            //this.media.BufferingTime = TimeSpan.FromSeconds(1);
             this.UpdateStatusText();
             this.UpdatePlayPauseButton();
         }
@@ -233,26 +233,37 @@ namespace SeeSharp.WPF
 
         private void UpdatePlayPauseButton()
         {
-            //this.playPauseButton.IsEnabled = true;
-            //this.playPauseButton.Tag = ButtonState.Play;
+            this.playPauseButton.IsEnabled = true;
+            this.playPauseButton.Tag = ButtonState.Play;
+            MediaState mediaState = GetMediaState();
 
-            //if (media.Position == media.NaturalDuration && media.NaturalDuration.TimeSpan != TimeSpan.Zero)
-            //{
-            //    this.playPauseButton.Tag = ButtonState.Restart;
-            //    this.playPauseButton.Style = (Style)App.Current.Resources["ReplayButtonStyle"];
-            //}
-            //else if (media.CurrentState == MediaElementState.Playing)
-            //{
-            //    this.playPauseButton.Tag = ButtonState.Pause;
-            //    this.playPauseButton.Style = (Style)App.Current.Resources["PauseButtonStyle"];
-            //}
-            //else if (media.CurrentState == MediaElementState.Paused || media.CurrentState == MediaElementState.Stopped)
-            //{
-            //    this.playPauseButton.Tag = ButtonState.Play;
-            //    this.playPauseButton.Style = (Style)App.Current.Resources["PlayButtonStyle"];
-            //}
-            //else
-            //    this.playPauseButton.IsEnabled = false;
+            if (media.Position == media.NaturalDuration && media.NaturalDuration.TimeSpan != TimeSpan.Zero)
+            {
+                this.playPauseButton.Tag = ButtonState.Restart;
+                this.playPauseButton.Style = (Style)App.Current.Resources["ReplayButtonStyle"];
+            }
+            else if (mediaState == MediaState.Play)
+            {
+                this.playPauseButton.Tag = ButtonState.Pause;
+                this.playPauseButton.Style = (Style)App.Current.Resources["PauseButtonStyle"];
+            }
+            else if (mediaState == MediaState.Pause || mediaState == MediaState.Stop)
+            {
+                this.playPauseButton.Tag = ButtonState.Play;
+                this.playPauseButton.Style = (Style)App.Current.Resources["PlayButtonStyle"];
+            }
+            else
+                this.playPauseButton.IsEnabled = false;
+        }
+
+        private MediaState GetMediaState()
+        {
+            FieldInfo hlp = typeof(MediaElement).GetField("_helper", BindingFlags.NonPublic | BindingFlags.Instance);
+            object helperObject = hlp.GetValue(media);
+            FieldInfo stateField = helperObject.GetType().GetField("_currentState", BindingFlags.NonPublic | BindingFlags.Instance);
+            MediaState state = (MediaState)stateField.GetValue(helperObject);
+
+            return state;
         }
 
         private void MainPage_Click(object sender, RoutedEventArgs e)
@@ -291,9 +302,8 @@ namespace SeeSharp.WPF
             if (currentModuleIndex > userModuleIndex)
             {
                 int currentPercentage = Convert.ToInt32(Math.Ceiling(userManager.UserInfo.Percentage + OneModuleFinished));
-                currentPercentage = currentPercentage > CourseFinished ? CourseFinished : currentPercentage;
 
-                //mainPage.ProgressCircle.Percentage = currentPercentage;
+                currentPercentage = currentPercentage > CourseFinished ? CourseFinished : currentPercentage;
                 mainPage.ProgressPercentageTextBlock.Text = string.Format(AppSettingsDictionary.ShowPercentage, currentPercentage);
                 userManager.UserInfo.LastTutorial = _moduleManager.CurrentModule.ModuleTag;
                 userManager.UserInfo.Percentage = currentPercentage;
@@ -341,6 +351,13 @@ namespace SeeSharp.WPF
 
             if (File.Exists(pathToTemplateProgram))
                 Process.Start("notepad.exe", pathToTemplateProgram);
+            else
+            {
+                WindowPage page = (WindowPage)App.Current.MainWindow;
+                MainPage root = page.MainPage;
+
+                root.SetAlert(PageDictionary.FileNotAvaliable);
+            }
         }
     }
 }

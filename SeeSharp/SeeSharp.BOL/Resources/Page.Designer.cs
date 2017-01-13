@@ -61,6 +61,15 @@ namespace SeeSharp.BOL.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Program do tego modułu jest niedostępny..
+        /// </summary>
+        internal static string FileNotAvaliable {
+            get {
+                return ResourceManager.GetString("FileNotAvaliable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Pomyślnie zarejestrowano konto o loginie {0}! {1}Twój kod rejestracyjny to: {2}.
         /// </summary>
         internal static string SuccesfullRegisterMessagePattern {

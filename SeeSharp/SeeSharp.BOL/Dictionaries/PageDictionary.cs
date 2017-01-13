@@ -22,5 +22,13 @@ namespace SeeSharp.BO.Dictionaries
                 return ResourceManager.GetString("TutorialNotStarted");
             }
         }
+
+        public static string FileNotAvaliable
+        {
+            get
+            {
+                return ResourceManager.GetString("FileNotAvaliable");
+            }
+        }
     }
 }
