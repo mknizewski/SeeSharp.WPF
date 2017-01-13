@@ -69,7 +69,6 @@ namespace SeeSharp.WPF
 
             this.DynamicView.Children.Clear();
             this.DynamicView.Children.Add(view);
-            this.DynamicView.UpdateLayout();
 
             this.SectionBlock.Text = string.Format(AppSettingsDictionary.SectionPrefixPattern, section);
         }

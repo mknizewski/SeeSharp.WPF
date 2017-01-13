@@ -31,7 +31,7 @@ namespace SeeSharp.WPF
             {
                 string loginName = this.LoginBox.Text;
                 string loginCode = this.CodeBox.Text;
-                MainPage root = ViewFactory.MainPageInstance;
+                MainPage root = (MainPage)System.Windows.Application.Current.MainWindow;
                 ServerServiceClient serverService = ServerServiceClient.GetInstance();
 
                 if (string.IsNullOrEmpty(loginName) || string.IsNullOrEmpty(loginCode))
@@ -46,6 +46,7 @@ namespace SeeSharp.WPF
 
                 root.SetView(ViewType.WelcomePage, NavigationDictionary.WelcomePageView);
                 root.SetUserMenuView(User.Logged);
+                root.UpdateLayout();
             }
             catch (Exception ex)
             {

@@ -1,17 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using SeeSharp.BO.Managers;
+using SeeSharp.BO.Dictionaries;
 
 namespace SeeSharp.WPF
 {
@@ -20,9 +11,24 @@ namespace SeeSharp.WPF
     /// </summary>
     public partial class AchivmentItem : UserControl
     {
-        public AchivmentItem()
+        private Achivment _achivment;
+
+        public AchivmentItem(Achivment achivment)
         {
+            _achivment = achivment;
+
             InitializeComponent();
+            InitializeAchivment();
+        }
+
+        private void InitializeAchivment()
+        {
+            string achivImageFileName = string.Format(AppSettingsDictionary.AchivmentImageDirectory, _achivment.File);
+            Uri uri = new Uri(achivImageFileName, UriKind.Relative);
+
+            this.ImageAchiv.Source = new BitmapImage(uri);
+            this.TitleText.Text = _achivment.Title;
+            this.DetialText.Text = _achivment.Details;
         }
     }
 }

@@ -177,7 +177,7 @@
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0">
                     <Viewbox StretchDirection="DownOnly" Stretch="Uniform">
-                        <TextBlock Text="Internetowy przewodnik po .NET" FontFamily="Open Sans" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Text="Przewodnik po .NET" FontFamily="Open Sans" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Viewbox>
                 </Grid>
                 <Grid Grid.Row="1" x:Name="DynamicView" Background="#FFF1F1F1">
