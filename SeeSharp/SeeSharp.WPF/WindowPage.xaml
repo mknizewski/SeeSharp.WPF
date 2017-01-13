@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="Przewodnik .NET" Height="550" Width="1150" WindowStartupLocation="CenterScreen">
     <Grid x:Name="LayoutRoot">
-        <local:MainPage></local:MainPage>
+        <local:MainPage x:Name="MainPage"></local:MainPage>
     </Grid>
 </Window>

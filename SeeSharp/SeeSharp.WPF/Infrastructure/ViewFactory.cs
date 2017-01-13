@@ -6,11 +6,6 @@ namespace SeeSharp.Infrastructure
 {
     public static class ViewFactory
     {
-        /// <summary>
-        /// Instancja MainPage służąca w celu zmiany widoków.
-        /// </summary>
-        public static MainPage MainPageInstance;
-
         public static UserControl GetView(ViewType viewType)
         {
             switch (viewType)

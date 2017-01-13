@@ -21,14 +21,12 @@ namespace SeeSharp.WPF
 
         private void App_Exit(object sender, ExitEventArgs e)
         {
-            ViewFactory.MainPageInstance.Dispose();
+            
         }
 
         private void App_Startup(object sender, StartupEventArgs e)
         {
-            Grid grid = new Grid();
-            MainPage mainPage = new MainPage();
-            ViewFactory.MainPageInstance = mainPage;
+           
         }
 
         private void ConfigureApp()

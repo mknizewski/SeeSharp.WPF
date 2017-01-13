@@ -31,7 +31,8 @@ namespace SeeSharp.WPF
             {
                 string loginName = this.LoginBox.Text;
                 string loginCode = this.CodeBox.Text;
-                MainPage root = ViewFactory.MainPageInstance;
+                WindowPage page = (WindowPage)App.Current.MainWindow;
+                MainPage root = page.MainPage;
                 ServerServiceClient serverService = ServerServiceClient.GetInstance();
 
                 if (string.IsNullOrEmpty(loginName) || string.IsNullOrEmpty(loginCode))
@@ -50,7 +51,10 @@ namespace SeeSharp.WPF
             }
             catch (Exception ex)
             {
-                ViewFactory.MainPageInstance.SetAlert(ex.Message);
+                WindowPage page = (WindowPage)App.Current.MainWindow;
+                MainPage root = page.MainPage;
+
+                root.SetAlert(ex.Message);
             }
         }
 
