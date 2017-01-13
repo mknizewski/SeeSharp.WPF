@@ -51,13 +51,19 @@ namespace SeeSharp.WPF
             }
             catch (Exception ex)
             {
-                ViewFactory.MainPageInstance.SetAlert(ex.Message);
+                WindowPage page = (WindowPage)App.Current.MainWindow;
+                MainPage root = page.MainPage;
+
+                root.SetAlert(ex.Message);
             }
         }
 
         private void Login_OnClick(object sender, RoutedEventArgs e)
         {
-            ViewFactory.MainPageInstance.SetView(ViewType.Login, NavigationDictionary.LoginPageView);
+            WindowPage page = (WindowPage)App.Current.MainWindow;
+            MainPage root = page.MainPage;
+
+            root.SetView(ViewType.Login, NavigationDictionary.LoginPageView);
         }
     }
 }

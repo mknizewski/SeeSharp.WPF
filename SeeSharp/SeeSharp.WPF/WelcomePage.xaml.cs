@@ -24,7 +24,9 @@ namespace SeeSharp.WPF
 
         private void InitializeAchivmentPanel()
         {
-            UserManager userManager = ViewFactory.MainPageInstance.UserManager;
+            WindowPage page = (WindowPage)App.Current.MainWindow;
+            MainPage root = page.MainPage;
+            UserManager userManager = root.UserManager;
 
             ServerServiceClient serverSevice = ServerServiceClient.GetInstance();
             int[] achivList = serverSevice.GetAchivmentFile(userManager.UserInfo.Login);
@@ -50,7 +52,8 @@ namespace SeeSharp.WPF
 
         private void InitializeView()
         {
-            MainPage mainView = ViewFactory.MainPageInstance;
+            WindowPage page = (WindowPage)App.Current.MainWindow;
+            MainPage mainView = page.MainPage;
 
             if (mainView != null)
             {
@@ -96,16 +99,22 @@ namespace SeeSharp.WPF
         {
             try
             {
-                string lastModuleTag = ViewFactory.MainPageInstance.UserManager.UserInfo.LastTutorial;
+                WindowPage page = (WindowPage)App.Current.MainWindow;
+                MainPage root = page.MainPage;
+
+                string lastModuleTag = root.UserManager.UserInfo.LastTutorial;
 
                 if (string.IsNullOrEmpty(lastModuleTag))
                     throw new Exception(ExceptionDictionary.TutorialNotStarted);
 
-                ViewFactory.MainPageInstance.SetModule(lastModuleTag);
+                root.SetModule(lastModuleTag);
             }
             catch (Exception ex)
             {
-                ViewFactory.MainPageInstance.SetAlert(ex.Message);
+                WindowPage page = (WindowPage)App.Current.MainWindow;
+                MainPage root = page.MainPage;
+
+                root.SetAlert(ex.Message);
             }
         }
 
@@ -118,7 +127,9 @@ namespace SeeSharp.WPF
                 try
                 {
                     List<Module> modules = ModuleManager.ModuleList;
-                    UserManager userManager = ViewFactory.MainPageInstance.UserManager;
+                    WindowPage page = (WindowPage)App.Current.MainWindow;
+                    MainPage root = page.MainPage;
+                    UserManager userManager = root.UserManager;
 
                     string selectedTag = selectedItem.Tag.ToString();
                     string userTag = userManager.UserInfo.LastTutorial;
@@ -133,11 +144,14 @@ namespace SeeSharp.WPF
                     if (diffrence > MaxModulesDiffrence)
                         throw new Exception(ExceptionDictionary.ModuleNotAllowed);
 
-                    ViewFactory.MainPageInstance.SetModule(selectedTag);
+                    root.SetModule(selectedTag);
                 }
                 catch (Exception ex)
                 {
-                    ViewFactory.MainPageInstance.SetAlert(ex.Message);
+                    WindowPage page = (WindowPage)App.Current.MainWindow;
+                    MainPage root = page.MainPage;
+
+                    root.SetAlert(ex.Message);
                 }
             }
         }

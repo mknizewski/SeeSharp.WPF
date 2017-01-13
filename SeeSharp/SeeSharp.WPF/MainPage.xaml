@@ -180,7 +180,7 @@
                         <TextBlock Text="Przewodnik po .NET" FontFamily="Open Sans" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                     </Viewbox>
                 </Grid>
-                <ContentControl Grid.Row="1" x:Name="DynamicView"></ContentControl>
+                <ContentControl Grid.Row="1" x:Name="DynamicView" Background="#FFF1F1F1"></ContentControl>
                 <Grid Grid.Row="2" Background="#FF2D3370">
                     <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Text="Wersja: 0.01" x:Name="AppVersion" Margin="5 0 0 0" />
                     <TextBlock Margin="0 0 15 0" x:Name="SectionBlock" Text="Jesteś w sekcji: " Foreground="White" FontFamily="Open Sans" FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Center"></TextBlock>
