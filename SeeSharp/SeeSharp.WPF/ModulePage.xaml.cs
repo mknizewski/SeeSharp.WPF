@@ -4,6 +4,7 @@ using SeeSharp.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
@@ -135,9 +136,9 @@ namespace SeeSharp.WPF
                 this.ProgramDownloadLink.Visibility = Visibility.Visible;
 
                 string pathToMovie = string.Format(@AppSettingsDictionary.VideoDirectory, _moduleManager.CurrentModule.ModuleTag);
-                //string absoluteUri = HtmlPage.Document.DocumentUri + pathToMovie;
+                string absoluteUri = string.Concat(AppDomain.CurrentDomain.BaseDirectory, pathToMovie);
 
-                //this.media.Source = new Uri(HtmlPage.Document.DocumentUri, pathToMovie);
+                this.media.Source = new Uri(absoluteUri);
             }
 
             this.DataContext = this._viewModel = new MediaViewModel(this.media);
@@ -338,7 +339,8 @@ namespace SeeSharp.WPF
                     )
                 );
 
-            Process.Start("notepad.exe", pathToTemplateProgram);
+            if (File.Exists(pathToTemplateProgram))
+                Process.Start("notepad.exe", pathToTemplateProgram);
         }
     }
 }

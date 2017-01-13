@@ -197,7 +197,7 @@ namespace SeeSharp.BOL.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to /Content/MovieCourses/{0}.mp4.
+        ///   Looks up a localized string similar to Content\MovieCourses\{0}.mp4.
         /// </summary>
         internal static string VideoDirectory {
             get {

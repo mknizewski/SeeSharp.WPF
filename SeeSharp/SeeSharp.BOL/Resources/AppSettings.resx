@@ -174,7 +174,7 @@ Ryby się lisa gdym najpiękniejszéj Najpiękniejszego Dać Rzeczypospolitéj. 
     <value>Wersja: {0}</value>
   </data>
   <data name="VideoDirectory" xml:space="preserve">
-    <value>/Content/MovieCourses/{0}.mp4</value>
+    <value>Content\MovieCourses\{0}.mp4</value>
   </data>
   <data name="XmlFileDirectory" xml:space="preserve">
     <value>XmlFiles</value>
