@@ -95,6 +95,104 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SeeSharp.BOL\SeeSharp.BO.csproj">
+      <Project>{83e26b4f-9a3b-462b-8fbb-a87f0dd71dd1}</Project>
+      <Name>SeeSharp.BO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Infrastructure\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Achivments\CesarzNET.png" />
+    <Resource Include="Images\Achivments\CopyAndPasteDev.png" />
+    <Resource Include="Images\Achivments\DeckareVarNotWar.png" />
+    <Resource Include="Images\Achivments\ItsPower.png" />
+    <Resource Include="Images\Achivments\MakeVSGreatAgain.png" />
+    <Resource Include="Images\Achivments\ObiektowyJanusz.png" />
+    <Resource Include="Images\Achivments\TechnologyPionier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Interface\airplane.png" />
+    <Resource Include="Images\Interface\attachment.png" />
+    <Resource Include="Images\Interface\broken-heart.png" />
+    <Resource Include="Images\Interface\browser.png" />
+    <Resource Include="Images\Interface\cancel.png" />
+    <Resource Include="Images\Interface\center-alignment.png" />
+    <Resource Include="Images\Interface\clock-1.png" />
+    <Resource Include="Images\Interface\clock.png" />
+    <Resource Include="Images\Interface\cloud-computing.png" />
+    <Resource Include="Images\Interface\compass.png" />
+    <Resource Include="Images\Interface\computer.png" />
+    <Resource Include="Images\Interface\cursor.png" />
+    <Resource Include="Images\Interface\document-1.png" />
+    <Resource Include="Images\Interface\document-2.png" />
+    <Resource Include="Images\Interface\document-3.png" />
+    <Resource Include="Images\Interface\document.png" />
+    <Resource Include="Images\Interface\download.png" />
+    <Resource Include="Images\Interface\earth-globe.png" />
+    <Resource Include="Images\Interface\email.png" />
+    <Resource Include="Images\Interface\film.png" />
+    <Resource Include="Images\Interface\folder.png" />
+    <Resource Include="Images\Interface\gamepad.png" />
+    <Resource Include="Images\Interface\group.png" />
+    <Resource Include="Images\Interface\heart.png" />
+    <Resource Include="Images\Interface\internet.png" />
+    <Resource Include="Images\Interface\layers.png" />
+    <Resource Include="Images\Interface\left-alignment.png" />
+    <Resource Include="Images\Interface\light-bulb-1.png" />
+    <Resource Include="Images\Interface\light-bulb.png" />
+    <Resource Include="Images\Interface\link.png" />
+    <Resource Include="Images\Interface\list.png" />
+    <Resource Include="Images\Interface\mail.png" />
+    <Resource Include="Images\Interface\microphone.png" />
+    <Resource Include="Images\Interface\notification.png" />
+    <Resource Include="Images\Interface\padlock.png" />
+    <Resource Include="Images\Interface\pencil.png" />
+    <Resource Include="Images\Interface\phone-book-1.png" />
+    <Resource Include="Images\Interface\phone-book.png" />
+    <Resource Include="Images\Interface\picture-1.png" />
+    <Resource Include="Images\Interface\picture.png" />
+    <Resource Include="Images\Interface\placeholder.png" />
+    <Resource Include="Images\Interface\push-pin.png" />
+    <Resource Include="Images\Interface\right-alignment.png" />
+    <Resource Include="Images\Interface\settings.png" />
+    <Resource Include="Images\Interface\share.png" />
+    <Resource Include="Images\Interface\shield-1.png" />
+    <Resource Include="Images\Interface\shield-2.png" />
+    <Resource Include="Images\Interface\shield.png" />
+    <Resource Include="Images\Interface\smartphone.png" />
+    <Resource Include="Images\Interface\speech-bubble-1.png" />
+    <Resource Include="Images\Interface\speech-bubble.png" />
+    <Resource Include="Images\Interface\tablet.png" />
+    <Resource Include="Images\Interface\unlock.png" />
+    <Resource Include="Images\Interface\upload.png" />
+    <Resource Include="Images\Interface\user-1.png" />
+    <Resource Include="Images\Interface\user-2.png" />
+    <Resource Include="Images\Interface\user-3.png" />
+    <Resource Include="Images\Interface\user.png" />
+    <Resource Include="Images\Interface\volume.png" />
+    <Resource Include="Images\Interface\zoom-in.png" />
+    <Resource Include="Images\Interface\zoom-out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Video\full_screen.png" />
+    <Resource Include="Images\Video\full_screen_hover.png" />
+    <Resource Include="Images\Video\pause_button.png" />
+    <Resource Include="Images\Video\pause_button_hover.png" />
+    <Resource Include="Images\Video\play_button.png" />
+    <Resource Include="Images\Video\play_button_hover.png" />
+    <Resource Include="Images\Video\replay_button.png" />
+    <Resource Include="Images\Video\replay_button_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\icon-account.png" />
+    <Resource Include="Images\person-flat.png" />
+    <Resource Include="Images\visualstudio-pro.png" />
+    <Resource Include="Images\Visual_Studio_2013_Logo.svg.png" />
+    <Resource Include="Images\w_uwb_kolor.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

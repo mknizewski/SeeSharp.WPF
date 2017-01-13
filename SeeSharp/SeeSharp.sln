@@ -5,7 +5,119 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeeSharp.WPF", "SeeSharp.WPF\SeeSharp.WPF.csproj", "{8F16CDA2-5DA7-4A61-A02B-FD004D8EA8E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeeSharp.BOL", "SeeSharp.BOL\SeeSharp.BOL.csproj", "{83E26B4F-9A3B-462B-8FBB-A87F0DD71DD1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeeSharp.BO", "SeeSharp.BOL\SeeSharp.BO.csproj", "{83E26B4F-9A3B-462B-8FBB-A87F0DD71DD1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Content", "Content", "{E7190516-C1AF-4A75-B125-AE99B507A7C8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MovieCourses", "MovieCourses", "{15307C14-1447-42DB-879E-BF957F256F3A}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.1.1.mp4 = ..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.1.1.mp4
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.1.2.mp4 = ..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.1.2.mp4
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.1.3.mp4 = ..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.1.3.mp4
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.2.1.mp4 = ..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.2.1.mp4
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.2.2.mp4 = ..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.2.2.mp4
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.2.3.mp4 = ..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.2.3.mp4
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.2.4.mp4 = ..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.2.4.mp4
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.3.1.mp4 = ..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.3.1.mp4
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.3.2.mp4 = ..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.3.2.mp4
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.3.3.mp4 = ..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.3.3.mp4
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.4.1.mp4 = ..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.4.1.mp4
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.4.2.mp4 = ..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.4.2.mp4
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.5.1.mp4 = ..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.5.1.mp4
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.5.2.mp4 = ..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.5.2.mp4
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.5.3.mp4 = ..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.5.3.mp4
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.6.1.mp4 = ..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.6.1.mp4
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.6.2.mp4 = ..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.6.2.mp4
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.7.1.mp4 = ..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.7.1.mp4
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.7.2.mp4 = ..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.7.2.mp4
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.7.3.mp4 = ..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.7.3.mp4
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.7.4.mp4 = ..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.7.4.mp4
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.7.5.mp4 = ..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.7.5.mp4
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.7.6.mp4 = ..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.7.6.mp4
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.8.mp4 = ..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.8.mp4
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.9.mp4 = ..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\2.9.mp4
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\3.1.1.mp4 = ..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\3.1.1.mp4
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\3.1.2.mp4 = ..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\3.1.2.mp4
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\3.2.1.mp4 = ..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\3.2.1.mp4
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\3.2.2.mp4 = ..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\3.2.2.mp4
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\3.3.1.mp4 = ..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\3.3.1.mp4
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\3.3.2.mp4 = ..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\3.3.2.mp4
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\3.4.mp4 = ..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\3.4.mp4
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\3.5.mp4 = ..\..\SeeSharp\SeeSharp.Web\Content\MovieCourses\3.5.mp4
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MovieText", "MovieText", "{5E75171E-27A3-45DE-B3C1-C3A0B431CA97}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieText\1_1.txt = ..\..\SeeSharp\SeeSharp.Web\Content\MovieText\1_1.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieText\1_2.txt = ..\..\SeeSharp\SeeSharp.Web\Content\MovieText\1_2.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_1_1.txt = ..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_1_1.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_1_2.txt = ..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_1_2.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_1_3.txt = ..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_1_3.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_2_1.txt = ..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_2_1.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_2_2.txt = ..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_2_2.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_2_3.txt = ..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_2_3.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_2_4.txt = ..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_2_4.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_3_1.txt = ..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_3_1.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_3_2.txt = ..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_3_2.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_3_3.txt = ..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_3_3.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_4_1.txt = ..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_4_1.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_4_2.txt = ..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_4_2.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_5_1.txt = ..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_5_1.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_5_2.txt = ..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_5_2.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_5_3.txt = ..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_5_3.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_6_1.txt = ..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_6_1.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_6_2.txt = ..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_6_2.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_7_1.txt = ..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_7_1.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_7_2.txt = ..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_7_2.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_7_3.txt = ..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_7_3.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_7_4.txt = ..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_7_4.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_7_5.txt = ..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_7_5.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_7_6.txt = ..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_7_6.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_8.txt = ..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_8.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_9.txt = ..\..\SeeSharp\SeeSharp.Web\Content\MovieText\2_9.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieText\3_1_1.txt = ..\..\SeeSharp\SeeSharp.Web\Content\MovieText\3_1_1.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieText\3_1_2.txt = ..\..\SeeSharp\SeeSharp.Web\Content\MovieText\3_1_2.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieText\3_2_1.txt = ..\..\SeeSharp\SeeSharp.Web\Content\MovieText\3_2_1.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieText\3_2_2.txt = ..\..\SeeSharp\SeeSharp.Web\Content\MovieText\3_2_2.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieText\3_3_1.txt = ..\..\SeeSharp\SeeSharp.Web\Content\MovieText\3_3_1.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieText\3_3_2.txt = ..\..\SeeSharp\SeeSharp.Web\Content\MovieText\3_3_2.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieText\3_4.txt = ..\..\SeeSharp\SeeSharp.Web\Content\MovieText\3_4.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\MovieText\3_5.txt = ..\..\SeeSharp\SeeSharp.Web\Content\MovieText\3_5.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{17576C28-724F-4895-A759-52FC5FE6E361}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\SeeSharp\SeeSharp.Web\Content\Samples\2.2.1.txt = ..\..\SeeSharp\SeeSharp.Web\Content\Samples\2.2.1.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\Samples\2.2.2.txt = ..\..\SeeSharp\SeeSharp.Web\Content\Samples\2.2.2.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\Samples\2.2.3.txt = ..\..\SeeSharp\SeeSharp.Web\Content\Samples\2.2.3.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\Samples\2.2.4.txt = ..\..\SeeSharp\SeeSharp.Web\Content\Samples\2.2.4.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\Samples\2.3.1.txt = ..\..\SeeSharp\SeeSharp.Web\Content\Samples\2.3.1.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\Samples\2.3.2.txt = ..\..\SeeSharp\SeeSharp.Web\Content\Samples\2.3.2.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\Samples\2.3.3.txt = ..\..\SeeSharp\SeeSharp.Web\Content\Samples\2.3.3.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\Samples\2.4.1.txt = ..\..\SeeSharp\SeeSharp.Web\Content\Samples\2.4.1.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\Samples\2.4.2.txt = ..\..\SeeSharp\SeeSharp.Web\Content\Samples\2.4.2.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\Samples\2.5.1.txt = ..\..\SeeSharp\SeeSharp.Web\Content\Samples\2.5.1.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\Samples\2.5.2.txt = ..\..\SeeSharp\SeeSharp.Web\Content\Samples\2.5.2.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\Samples\2.5.3.txt = ..\..\SeeSharp\SeeSharp.Web\Content\Samples\2.5.3.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\Samples\2.6.1.txt = ..\..\SeeSharp\SeeSharp.Web\Content\Samples\2.6.1.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\Samples\2.6.2.txt = ..\..\SeeSharp\SeeSharp.Web\Content\Samples\2.6.2.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\Samples\2.7.1.txt = ..\..\SeeSharp\SeeSharp.Web\Content\Samples\2.7.1.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\Samples\2.7.2.txt = ..\..\SeeSharp\SeeSharp.Web\Content\Samples\2.7.2.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\Samples\2.7.3.txt = ..\..\SeeSharp\SeeSharp.Web\Content\Samples\2.7.3.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\Samples\2.7.4.txt = ..\..\SeeSharp\SeeSharp.Web\Content\Samples\2.7.4.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\Samples\2.7.5.txt = ..\..\SeeSharp\SeeSharp.Web\Content\Samples\2.7.5.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\Samples\2.7.6.txt = ..\..\SeeSharp\SeeSharp.Web\Content\Samples\2.7.6.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\Samples\2.8.txt = ..\..\SeeSharp\SeeSharp.Web\Content\Samples\2.8.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\Samples\2.9.txt = ..\..\SeeSharp\SeeSharp.Web\Content\Samples\2.9.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\Samples\3.1.1.txt = ..\..\SeeSharp\SeeSharp.Web\Content\Samples\3.1.1.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\Samples\3.1.2.txt = ..\..\SeeSharp\SeeSharp.Web\Content\Samples\3.1.2.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\Samples\3.2.1.txt = ..\..\SeeSharp\SeeSharp.Web\Content\Samples\3.2.1.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\Samples\3.2.2.txt = ..\..\SeeSharp\SeeSharp.Web\Content\Samples\3.2.2.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\Samples\3.3.1.txt = ..\..\SeeSharp\SeeSharp.Web\Content\Samples\3.3.1.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\Samples\3.3.2.txt = ..\..\SeeSharp\SeeSharp.Web\Content\Samples\3.3.2.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\Samples\3.4.txt = ..\..\SeeSharp\SeeSharp.Web\Content\Samples\3.4.txt
+		..\..\SeeSharp\SeeSharp.Web\Content\Samples\3.5.txt = ..\..\SeeSharp\SeeSharp.Web\Content\Samples\3.5.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,5 +136,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{15307C14-1447-42DB-879E-BF957F256F3A} = {E7190516-C1AF-4A75-B125-AE99B507A7C8}
+		{5E75171E-27A3-45DE-B3C1-C3A0B431CA97} = {E7190516-C1AF-4A75-B125-AE99B507A7C8}
+		{17576C28-724F-4895-A759-52FC5FE6E361} = {E7190516-C1AF-4A75-B125-AE99B507A7C8}
 	EndGlobalSection
 EndGlobal
