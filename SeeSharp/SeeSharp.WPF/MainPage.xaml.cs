@@ -2,6 +2,8 @@
 using SeeSharp.BO.Managers;
 using SeeSharp.Infrastructure;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -83,21 +85,17 @@ namespace SeeSharp.WPF
 
         public void SetAchivmentAlert(Achivments achivments)
         {
-            //ServerServiceClient serverService = ServerServiceClient.GetInstance();
-            //serverService.GetAchivmentFileAsync(UserManager.UserInfo.Login);
-            //serverService.GetAchivmentFileCompleted += (send, recv) =>
-            //{
-            //    List<int> achivList = recv.Result;
-            //    int achivId = (int)achivments;
+            ServerServiceClient serverService = ServerServiceClient.GetInstance();
+            List<int> achivList = serverService.GetAchivmentFile(UserManager.UserInfo.Login).ToList();
 
-            //    if (achivList != null)
-            //    {
-            //        if (!achivList.Contains(achivId))
-            //            ViewFactory.GetAchivmentAlert(achivments).Show();
-            //    }
-            //    else
-            //        ViewFactory.GetAchivmentAlert(achivments).Show();
-            //};
+            int achivId = (int)achivments;
+            if (achivList != null)
+            {
+                //if (!achivList.Contains(achivId))
+                    //ViewFactory.GetAchivmentAlert(achivments).Show();
+            }
+            //else
+                //ViewFactory.GetAchivmentAlert(achivments).Show();
         }
 
         public void SetModule(string tag)

@@ -93,10 +93,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Alert.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="CircularProgressBar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -120,9 +116,6 @@
     </Compile>
     <Compile Include="AchivmentItem.xaml.cs">
       <DependentUpon>AchivmentItem.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Alert.xaml.cs">
-      <DependentUpon>Alert.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>

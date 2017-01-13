@@ -1,6 +1,6 @@
 ﻿using System.Configuration;
 
-namespace SeeSharp.Web.Dictionaries
+namespace SeeSharp.BO.Dictionaries
 {
     public static class ServerDictionary
     {

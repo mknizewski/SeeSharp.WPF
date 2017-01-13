@@ -1,7 +1,7 @@
 ﻿using SeeSharp.Infrastructure;
-using SeeSharp.Web;
 using System.Windows;
 using System.Windows.Controls;
+using SeeSharp.BO.Managers;
 
 namespace SeeSharp.WPF
 {

@@ -1,6 +1,5 @@
 ﻿using SeeSharp.BO.Managers;
 using SeeSharp.WPF;
-using System.Windows;
 using System.Windows.Controls;
 
 namespace SeeSharp.Infrastructure
@@ -34,11 +33,6 @@ namespace SeeSharp.Infrastructure
                 default:
                     return new WelcomePage();
             }
-        }
-
-        public static Alert GetAlert(string meesage)
-        {
-            return new Alert(meesage);
         }
 
         public static UserControl GetModule(string tag)

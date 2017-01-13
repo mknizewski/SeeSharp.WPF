@@ -1,11 +1,10 @@
-﻿using SeeSharp.Web.Dictionaries;
-using SeeSharp.Web.Managers;
+﻿using SeeSharp.BO.Dictionaries;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Xml;
 
-namespace SeeSharp.Web
+namespace SeeSharp.BO.Managers
 {
     public class ServerServiceClient
     {

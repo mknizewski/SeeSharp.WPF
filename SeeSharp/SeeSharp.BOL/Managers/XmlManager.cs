@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Xml;
 
-namespace SeeSharp.Web.Managers
+namespace SeeSharp.BO.Managers
 {
     public static class XmlManager
     {
