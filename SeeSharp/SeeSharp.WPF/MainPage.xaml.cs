@@ -92,11 +92,11 @@ namespace SeeSharp.WPF
             int achivId = (int)achivments;
             if (achivList != null)
             {
-                //if (!achivList.Contains(achivId))
-                    //ViewFactory.GetAchivmentAlert(achivments).Show();
+                if (!achivList.Contains(achivId))
+                    ViewFactory.GetAchivmentAlert(achivments).Show();
             }
-            //else
-                //ViewFactory.GetAchivmentAlert(achivments).Show();
+            else
+                ViewFactory.GetAchivmentAlert(achivments).Show();
         }
 
         public void SetModule(string tag)
@@ -120,7 +120,6 @@ namespace SeeSharp.WPF
                 this.ProgressPercentageTextBlock.Visibility = Visibility.Visible;
                 this.ProgressPercentageViewBox.Visibility = Visibility.Visible;
 
-                //this.ProgressCircle.Percentage = UserManager.UserInfo.Percentage;
                 this.LoginName.Text = UserManager.UserInfo.Login;
                 this.ProgressPercentageTextBlock.Text = string.Format(AppSettingsDictionary.PercentagePattern, UserManager.UserInfo.Percentage);
             }
@@ -154,8 +153,8 @@ namespace SeeSharp.WPF
                 {
                     UIElement element = this.LayoutRoot.Children[fullScreenIndex];
 
-                   // if (element is ModulePage)
-                    //    (element as ModulePage).ChangeScreen();
+                   if (element is ModulePage)
+                        (element as ModulePage).ChangeScreen();
                 }
                 catch (ArgumentOutOfRangeException)
                 { }

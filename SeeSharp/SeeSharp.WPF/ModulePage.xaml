@@ -6,7 +6,68 @@
              xmlns:local="clr-namespace:SeeSharp.WPF"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
-            
+    <UserControl.Resources>
+        <local:VolumeConverter x:Key="VolumeConverter" />
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot" SizeChanged="LayoutRoot_SizeChanged">
+        <ScrollViewer x:Name="Scroll" BorderBrush="{x:Null}" BorderThickness="0">
+            <StackPanel Orientation="Vertical" x:Name="Stack">
+                <TextBlock x:Name="ModuleTitle" FontFamily="Open Sans" FontSize="32" Text="Title" HorizontalAlignment="Center" />
+                <TextBox x:Name="ModuleTextBox" AcceptsReturn="True" TextWrapping="Wrap" IsReadOnly="True" FontFamily="Open Sans" FontSize="16" Margin="20 10 20 10"  />
+                <Grid Margin="20 0 20 0" x:Name="ModuleGrid">
+                    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Border BorderThickness="0" Background="Black">
+                            <MediaElement x:Name="media"
+                              Source="http://ecn.channel9.msdn.com/o9/content/smf/progressivecontent/wildlife.wmv"						  
+							   />
+                        </Border>
+                        <Canvas x:Name="playCanvas" Grid.Row="1" Background="#444444" Height="8" MouseLeftButtonDown="PlayCanvas_MouseLeftButtonUp">
+                            <Rectangle x:Name="bufferBar" Fill="#777777" Height="8" Width="0" />
+                            <Rectangle x:Name="playBar" Fill="#CC181E" Height="8" Width="0" />
+                        </Canvas>
+
+                        <StackPanel Grid.Row="2" Orientation="Horizontal" Background="#1B1B1B">
+                            <Button x:Name="playPauseButton" Style="{StaticResource PlayButtonStyle}" Click="playPauseButton_Click" Cursor="Hand" />
+                            <Slider Cursor="Hand" Style="{StaticResource VolumeSlider}" Width="56" Minimum="0" Maximum="10" Value="{Binding Path=Volume, ElementName=media, Mode=TwoWay, Converter={StaticResource VolumeConverter}}" />
+                            <TextBlock Margin="6,0,0,0" VerticalAlignment="Center" Style="{StaticResource ProgressTextStyle}">                 
+					            <Run Text="{Binding PositionText}" Foreground="White" />
+					            <Run Text=" / " />
+					            <Run Text="{Binding DurationText}" />
+                            </TextBlock>
+
+                            <StackPanel Orientation="Horizontal" FlowDirection="RightToLeft">
+                                <Button x:Name="fullScreenButton" Cursor="Hand" Click="fullScreenButton_Click" Style="{StaticResource FullScreenButtonStyle}" />
+                            </StackPanel>
+                        </StackPanel>
+                        <TextBlock x:Name="errorText" Grid.Row="3" Foreground="Red" TextWrapping="Wrap" Visibility="Collapsed" />
+                    </Grid>
+                </Grid>
+                <Button x:Name="ProgramDownloadLink"  Width="140" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20 5 20 0">Pokaż program z video</Button>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="20 10 20 10">
+                    <Button x:Name="MainPage" Click="MainPage_Click" Cursor="Hand" Width="100" Height="65">
+                        <Button.Effect>
+                            <DropShadowEffect />
+                        </Button.Effect> Strona Główna
+                    </Button>
+                    <Button x:Name="PervModule" Click="PervModule_Click" Cursor="Hand" Width="100" Height="65" Margin="10 0 0 0">
+                        <Button.Effect>
+                            <DropShadowEffect />
+                        </Button.Effect> Poprzedni
+                    </Button>
+                    <Button x:Name="NextModule" Click="NextModule_Click" Cursor="Hand" Width="100" Height="65" Margin="10 0 0 0">
+                        <Button.Effect>
+                            <DropShadowEffect />
+                        </Button.Effect> Następny
+                    </Button>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </UserControl>

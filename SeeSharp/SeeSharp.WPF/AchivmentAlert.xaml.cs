@@ -1,36 +1,49 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using SeeSharp.BO.Managers;
+using SeeSharp.BO.Dictionaries;
 
 namespace SeeSharp.WPF
 {
     /// <summary>
     /// Interaction logic for AchivmentAlert.xaml
     /// </summary>
-    public partial class AchivmentAlert : UserControl
+    public partial class AchivmentAlert : Window
     {
-        private Achivment achivment;
-
-        public AchivmentAlert()
-        {
-            InitializeComponent();
-        }
+        private Achivment _achivment;
 
         public AchivmentAlert(Achivment achivment)
         {
-            this.achivment = achivment;
+            this._achivment = achivment;
+
+            InitializeComponent();
+            InitializeAlert();
+        }
+
+        private void InitializeAlert()
+        {
+            string achivImageFileName = string.Format(AppSettingsDictionary.AchivmentImageDirectory, _achivment.File);
+            Uri uri = new Uri(achivImageFileName, UriKind.Relative);
+
+            this.AchivImage.Source = new BitmapImage(uri);
+            this.TitleText.Text = _achivment.Title;
+            this.DetailsText.Text = _achivment.Details;
+        }
+
+        private void OKButton_Click(object sender, RoutedEventArgs e)
+        {
+            WindowPage page = (WindowPage)App.Current.MainWindow;
+            MainPage root = page.MainPage;
+
+            SaveAchivmentToProfile(_achivment.Id, root.UserManager.UserInfo.Login);
+            this.Close();
+        }
+
+        private static void SaveAchivmentToProfile(int achivId, string loginName)
+        {
+            ServerServiceClient serverService = ServerServiceClient.GetInstance();
+            serverService.UpdateAchivmentFile(achivId, loginName);
         }
     }
 }

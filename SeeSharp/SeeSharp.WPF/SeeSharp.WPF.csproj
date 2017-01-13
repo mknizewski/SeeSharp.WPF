@@ -71,9 +71,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="MediaViewModel.cs" />
     <Compile Include="RegisterPage.xaml.cs">
       <DependentUpon>RegisterPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="VolumeConverter.cs" />
     <Compile Include="WelcomePage.xaml.cs">
       <DependentUpon>WelcomePage.xaml</DependentUpon>
     </Compile>
@@ -285,6 +287,11 @@
     <Resource Include="Images\visualstudio-pro.png" />
     <Resource Include="Images\Visual_Studio_2013_Logo.svg.png" />
     <Resource Include="Images\w_uwb_kolor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\MovieCourses\" />
+    <Folder Include="Content\MovieText\" />
+    <Folder Include="Content\Samples\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
