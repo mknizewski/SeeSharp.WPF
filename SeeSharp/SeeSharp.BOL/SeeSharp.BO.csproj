@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -45,12 +46,15 @@
     <Compile Include="Dictionaries\GreetingsDictionary.cs" />
     <Compile Include="Dictionaries\NavigationDictionary.cs" />
     <Compile Include="Dictionaries\PageDictionary.cs" />
+    <Compile Include="Dictionaries\ServerDictionary.cs" />
     <Compile Include="Infrastructure\ResourceManagerFactory.cs" />
     <Compile Include="Managers\AchivmentManager.cs" />
     <Compile Include="Managers\CuriositiesManager.cs" />
     <Compile Include="Managers\GreetingsManager.cs" />
     <Compile Include="Managers\ModuleManager.cs" />
+    <Compile Include="Managers\ServerServiceClient.cs" />
     <Compile Include="Managers\UserManager.cs" />
+    <Compile Include="Managers\XmlManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\AppSettings.Designer.cs">
       <AutoGen>True</AutoGen>

@@ -1,10 +1,5 @@
 ﻿using SeeSharp.Infrastructure;
-using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
+using SeeSharp.Web;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -20,12 +15,13 @@ namespace SeeSharp.WPF
             this.Startup += App_Startup;
             this.Exit += App_Exit;
 
-            InitializeComponent();
+            this.InitializeComponent();
+            this.ConfigureApp();
         }
 
         private void App_Exit(object sender, ExitEventArgs e)
         {
-            
+            ViewFactory.MainPageInstance.Dispose();
         }
 
         private void App_Startup(object sender, StartupEventArgs e)
@@ -35,6 +31,12 @@ namespace SeeSharp.WPF
             ViewFactory.MainPageInstance = mainPage;
 
             this.MainWindow = mainPage;
+        }
+
+        private void ConfigureApp()
+        {
+            ServerServiceClient serviceManager = ServerServiceClient.GetInstance();
+            serviceManager.CreateDirectoriesIfDosentExists();
         }
     }
 }
