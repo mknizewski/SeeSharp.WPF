@@ -120,6 +120,9 @@
   <data name="AchivmentImageDirectory" xml:space="preserve">
     <value>Images/Achivments/{0}</value>
   </data>
+  <data name="AlertTitle" xml:space="preserve">
+    <value>Komunikat</value>
+  </data>
   <data name="AppVersion" xml:space="preserve">
     <value>1.0</value>
   </data>

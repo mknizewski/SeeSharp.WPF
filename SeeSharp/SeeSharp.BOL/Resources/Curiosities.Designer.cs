@@ -59,5 +59,86 @@ namespace SeeSharp.BOL.Resources {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to StackOverflow – jest napisane w .NET-cie. Najpopularniejszym użytkownikiem jest sam Jon Skeet. Reputacja na poziomie prawie miliona. Co ciekawe, można często go spotkać podczas przeszukiwania odpowiedzi jak komentuje z BARDZO szerokiej perspektywy. Tak czy inaczej to miłe go spotkać pracując społecznie dla dobra całej społeczności programistów.
+        /// </summary>
+        internal static string Curiosities_1 {
+            get {
+                return ResourceManager.GetString("Curiosities_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .NET jest strategicznym kierunkiem rozwoju oprogramowania w Microsofcie: ogłosił on, że następca systemu Windows XP będzie pracował w środowisku .NET, a aplikacje starszego typu (EXE) będą miały dostęp do zasobów maszyny przez przekształcenie na wywołania. W 2006 roku okazało się to jednak nieprawdą, gdyż tylko niewielki procent nowej wersji Windows korzysta z .NET..
+        /// </summary>
+        internal static string Curiosities_2 {
+            get {
+                return ResourceManager.GetString("Curiosities_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nazwa języka C# powstała analogicznie jak nazwa C++. Operator ++ w C (w C++ też) oznacza zwiększenie o jeden, więc C++ to więcej niż C. Autorzy C# wykorzystali podobny pomysł, gdzie symbol krzyżyka/kratki przypomina dwa połączone ze sobą operatory ++. W muzyce dźwięk C♯ jest wyższy niż dźwięk C, może to sugerować, że język jest rozwinięciem C/C++..
+        /// </summary>
+        internal static string Curiosities_3 {
+            get {
+                return ResourceManager.GetString("Curiosities_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nikt nie czyta tego pola..
+        /// </summary>
+        internal static string Curiosities_4 {
+            get {
+                return ResourceManager.GetString("Curiosities_4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pierwsza wersja Visual Studio łączyła w sobie kilka języków programowania (wcześniej firma Microsoft sprzedawała osobno pakiety dla poszczególnych języków). Składała się z Visual Basic 5.0, Visual C++ 5.0, Visual J++ 1.1, Visual FoxPro 5.0 i Visual InterDev 1.0. Była to jednocześnie pierwsza próba stworzenia uniwersalnego środowiska programowania, którego używały Visual C++, J++ i InterDev. Visual Basic i FoxPro używały swoich własnych środowisk..
+        /// </summary>
+        internal static string Curiosities_5 {
+            get {
+                return ResourceManager.GetString("Curiosities_5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Microsoft DreamSpark to program zapewniający studentom z całego świata dostęp do narzędzi technologicznych Microsoft. Po potwierdzeniu tożsamości zainteresowani mogą pobrać z witryny DreamSpark określony zestaw narzędzi projektowych i programistycznych oraz zestaw kluczy licencyjnych. Oprogramowanie udostępnione jest do użytku edukacyjnego, niekomercyjnego. W skład dostępnych produktów wchodzi między innymi Visual Studio 2008 Professional Edition, Visual Studio 2010 Professional Edition, a także Visual Stud [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Curiosities_6 {
+            get {
+                return ResourceManager.GetString("Curiosities_6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Windows Azure posiada wiele procedur i rozwiązań technicznych zapewniających wysokie bezpieczeństwo danych i aplikacji umieszczonych w chmurze. Można tutaj wyróżnić wielokrotne replikacje danych, tak aby przynajmniej jedna kopia znajdowała się w innym centrum obliczeniowym. Inną cechą jest podział maszyn na tzw. obszary awarii (ang. fault domains), a instancje aplikacji są na nich rozlokowywane tak, aby każda aplikacja znajdowała się w innym obszarze awarii. Dzięki temu, w przypadku fizycznej awarii kompute [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Curiosities_7 {
+            get {
+                return ResourceManager.GetString("Curiosities_7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CLI wykorzystuje bibliotekę klas i maszynę wirtualną Common Language Runtime (CLR) firmy Microsoft. W trakcie przygotowania jest wiele kompilatorów, które będą generować kod dla CLR zapisany w postaci Common Intermediate Language (CIL) (inna nazwa: Microsoft Intermediate Language, MSIL). Kod CIL jest niezależny od zestawu instrukcji procesora, co umożliwia jego translację na kod natywny. W związku z tym CIL może być nazwany asemblerem wysokiego poziomu. Maszyna CLR jest z założenia konkurentem dla Java Virt [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Curiosities_8 {
+            get {
+                return ResourceManager.GetString("Curiosities_8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to C# łączy w sobie to, co najlepsze z języków Java, C oraz C++. Składnia języka podobna jest do tej z C++, zaś samo działanie programów przypomina mechanizm Javy (jest to wirtualizacja)..
+        /// </summary>
+        internal static string Curiosities_9 {
+            get {
+                return ResourceManager.GetString("Curiosities_9", resourceCulture);
+            }
+        }
     }
 }

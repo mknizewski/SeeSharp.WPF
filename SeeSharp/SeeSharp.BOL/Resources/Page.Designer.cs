@@ -59,5 +59,23 @@ namespace SeeSharp.BOL.Resources {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pomyślnie zarejestrowano konto o loginie {0}! {1}Twój kod rejestracyjny to: {2}.
+        /// </summary>
+        internal static string SuccesfullRegisterMessagePattern {
+            get {
+                return ResourceManager.GetString("SuccesfullRegisterMessagePattern", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nie zaczęto.
+        /// </summary>
+        internal static string TutorialNotStarted {
+            get {
+                return ResourceManager.GetString("TutorialNotStarted", resourceCulture);
+            }
+        }
     }
 }

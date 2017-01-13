@@ -59,5 +59,77 @@ namespace SeeSharp.BOL.Resources {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Miłego dnia, {0}!.
+        /// </summary>
+        internal static string DefaultPattern {
+            get {
+                return ResourceManager.GetString("DefaultPattern", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wesołego piątku, {0}!.
+        /// </summary>
+        internal static string FridayPattern {
+            get {
+                return ResourceManager.GetString("FridayPattern", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Miłego poniedziałku, {0}!.
+        /// </summary>
+        internal static string MondayPattern {
+            get {
+                return ResourceManager.GetString("MondayPattern", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Udanej soboty, {0}!.
+        /// </summary>
+        internal static string SaturdayPattern {
+            get {
+                return ResourceManager.GetString("SaturdayPattern", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Spokojnej niedzieli, {0}!.
+        /// </summary>
+        internal static string SundayPattern {
+            get {
+                return ResourceManager.GetString("SundayPattern", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Miłego czwartku, {0}!.
+        /// </summary>
+        internal static string ThursdayPattern {
+            get {
+                return ResourceManager.GetString("ThursdayPattern", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Spokojnego wtorku, {0}!.
+        /// </summary>
+        internal static string TuesdayPattern {
+            get {
+                return ResourceManager.GetString("TuesdayPattern", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Udanej środy, {0}!.
+        /// </summary>
+        internal static string WenesdayPattern {
+            get {
+                return ResourceManager.GetString("WenesdayPattern", resourceCulture);
+            }
+        }
     }
 }

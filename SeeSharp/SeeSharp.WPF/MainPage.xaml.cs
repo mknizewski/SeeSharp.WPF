@@ -74,7 +74,11 @@ namespace SeeSharp.WPF
 
         public void SetAlert(string message)
         {
-            //ViewFactory.GetAlert(message).Show();
+            MessageBox.Show(
+                message,
+                AppSettingsDictionary.AlertTitle,
+                MessageBoxButton.OK, 
+                MessageBoxImage.Information);
         }
 
         public void SetAchivmentAlert(Achivments achivments)

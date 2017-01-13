@@ -126,5 +126,13 @@ namespace SeeSharp.BO.Dictionaries
                 return AppSettings.GetString("RandomText");
             }
         }
+
+        public static string AlertTitle
+        {
+            get
+            {
+                return AppSettings.GetString("AlertTitle");
+            }
+        }
     }
 }
