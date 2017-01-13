@@ -1,0 +1,54 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Interfejsy
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Dodawanie_liczb prog1 = new Dodawanie_liczb(120, 30);
+            prog1.WyswietlInformacje();
+            Console.ReadKey();
+        }
+    }  
+
+    public interface Kod_programu
+    {
+        void WyswietlInformacje();
+        double PoliczIloscLiniiNaMinute();
+    }
+
+    public class Dodawanie_liczb : Kod_programu
+    {
+        private int czas_na_napisanie;
+        private int ilosc_linii;
+
+        public Dodawanie_liczb()
+        {
+            czas_na_napisanie = 0;
+            ilosc_linii = 14;
+        }
+
+        public Dodawanie_liczb(int c, int il)
+        {
+            czas_na_napisanie = c;
+            ilosc_linii = il;
+        }
+
+        public double PoliczIloscLiniiNaMinute()
+        {
+            return (60 * ilosc_linii) / czas_na_napisanie;
+        }
+
+        public void WyswietlInformacje()
+        {
+            Console.WriteLine("Czas na napisanie programu: {0} sekund", czas_na_napisanie);
+            Console.WriteLine("Ilość linii napisanego kodu: {0}", ilosc_linii);
+            Console.WriteLine("Ilość linii kodu na minutę: {0}", PoliczIloscLiniiNaMinute());
+        }
+    }
+}
+

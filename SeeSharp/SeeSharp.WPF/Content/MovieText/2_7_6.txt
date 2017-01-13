@@ -1,0 +1,4 @@
+Polimorfizm to tak zwana wielopostaciowość. Są to mechanizmy pozwalające programiście używać wartości, zmiennych i podprogramów na kilka różnych sposobów. Inaczej mówiąc jest to możliwość wyabstrahowania wyrażeń od konkretnych typów. Opisując najprościej, polimorfizm polega na zdolności obiektu do różnych zachowań zależnie od bieżącego wykonania programu.
+Polimorfizm to filar programowania obiektowego. Polega na różnym zachowaniu tych samych metod polimorficznych (o tych samych deklaracjach) w klasach będących w relacji dziedziczenia.
+ 
+Metodami polimorficznymi (czyli obsługującymi mechanizm polimorfizmu) są metody wirtualne oraz metody abstrakcyjne.

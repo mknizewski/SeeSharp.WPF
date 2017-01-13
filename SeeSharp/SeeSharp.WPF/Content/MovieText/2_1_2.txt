@@ -1,0 +1,7 @@
+Aby zainstalować program Visual Studio należy uruchomić ściągnięty przez nas instalator programu. Po krótkim oczekiwaniu pokaże się nam okno z wyborem ścieżki instalacji środowiska z możliwością jej zmiany. Jeżeli ścieżka instalacyjna jest rozpoznawana przez instalator, wybieramy opcję Install. Program zacznie się instalować.
+
+Po krótkim czasie instalacji wyświetli się okno z powodzeniem. Zmuszeni jesteśmy zrestartować komputer, aby Visual Studio mógł zacząć działać.
+
+Po ponownym uruchomieniu komputera możemy uruchomić Visual Studio, przykładowo z menu start. Wyświetli się nam okno z koniecznością zalogowania się na konto Microsoft, bądź rejestracją konta w przypadku, gdy takowego nie posiadamy.
+
+Jeżeli zalogujemy się pomyślnie, od tej pory możemy korzystać z programu Visual Studio.

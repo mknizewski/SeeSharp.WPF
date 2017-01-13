@@ -1,0 +1,10 @@
+Rzutowanie jest określane mianem tzw. jawnej konwersji typów (implicit). Rzutowanie jawne informuje kompilator, że celowo zamierzamy dokonać konwersji oraz że jesteśmy świadomi, że może dojść do utracenia danych.
+
+W przypadku gdy rzutujemy zmienną typu int do typu double (konwersja poszerzająca) nie ryzykujemy utraceniem danych, ponieważ double jest bardziej pojemny. Jeżeli zaś będziemy rzutować zmienną typu double do int (konwersja przybliżająca), sprawimy, że zmienna będzie miała wartość tylko całkowitą (część ułamkowa zostanie utracona).
+
+Utrata precyzji nie musi powodować błędu, ale wymaga, aby proces takiej konwersji był kontrolowany przez programistę, dlatego konieczne jest jawne wykonywanie operacji rzutowania typów.
+
+Istnieją też inne konwersje dostępne w C#:
+- konwersje niejawne (explicit);
+- zdefiniowane przez użytkownika;
+- konwersje przy pomocy metod do konwersji dostępnych w bibliotekach.

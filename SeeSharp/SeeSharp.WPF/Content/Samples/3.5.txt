@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+
+namespace Delegaty_zlozone
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            klawisz zamykanie = delegate(string info) //utworzenie anonimowego delegata
+            {
+                Console.WriteLine(info); 
+                Thread.Sleep(3000); //uśpienie programu na n sekund, gdy 3000 wtedy 3 sekundy. Zatem na początku:
+            };
+
+            zamykanie("Zapisuję"); //wywołany zostanie delegat z komunikatem zapisuję 
+            zamykanie = Zamknij;  //zapisuję do delegaty metodę Zamknij()
+            zamykanie += Wylacz; //dodaję do delegaty kolejną metodę Wylacz()
+            zamykanie("Koniec"); //wykonujemy delegatę, dlatego na poczatku pokaze sie nam komunikat z Zamknij() i potem Koniec i potem komunikat z Wylacz() i potem Koniec
+            Console.ReadKey();
+        }
+
+        public delegate void klawisz(string komunikat);  //deklaracja metody delegata, nie zwraca niczego
+
+        static void Zamknij(string info) //metoda która będzie wywoływana gdy czas będzie równy 0
+        {
+            Console.WriteLine("Zamykam program\n" + info);
+        }
+
+        static void Wylacz(string info) //metoda która będzie wywoływana gdy czas bedzie >0 różny
+        {
+            Console.WriteLine("Wyłączam komputer\n" + info);
+        }
+    }
+}

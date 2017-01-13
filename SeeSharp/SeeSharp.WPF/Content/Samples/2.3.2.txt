@@ -1,0 +1,24 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Operatory_logiczne
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            bool prawda = true, falsz = false;
+            Console.WriteLine(prawda && falsz);
+            Console.WriteLine(prawda || falsz);
+            Console.WriteLine(!prawda);
+            Console.WriteLine(!falsz);
+            Console.WriteLine(prawda ^ prawda);
+            Console.WriteLine(prawda ^ falsz);
+            Console.WriteLine(falsz ^ prawda);
+            Console.WriteLine(falsz ^ falsz);
+            Console.ReadKey();
+        }
+    }
+}

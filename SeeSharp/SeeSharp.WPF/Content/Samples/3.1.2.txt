@@ -1,0 +1,72 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Klasy_abstrakcyjne
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Rzeczy[] rzeczy = new Rzeczy[4];
+
+            rzeczy[0] = new Komputer("Komputer1", "HP");
+            rzeczy[1] = new Monitor("Samsung", 1145.0);
+            rzeczy[2] = new Komputer("Komputer2", "Lenovo");
+            rzeczy[3] = new Monitor("LG", 1800.0);
+
+            for (int i = 0; i < rzeczy.Length; i++)
+                Console.WriteLine(rzeczy[i].Wypisz());
+
+            Console.ReadKey();
+        }
+    }
+
+    abstract class Rzeczy
+    {
+        public string Nazwa;
+
+        public Rzeczy(string nazwa)
+        {
+            this.Nazwa = nazwa;
+        }
+
+        public virtual string Wypisz()
+        {
+            return string.Empty;
+        }
+    }
+
+    class Komputer : Rzeczy 
+    {
+        public string Marka;
+
+        public Komputer(string nazwa, string marka)
+            : base(nazwa)
+        {
+            this.Marka = marka;
+        }
+
+        public override string Wypisz()
+        {
+            return string.Format("Nazwa komputera: {0}, Marka: {1}", Nazwa, Marka);
+        }
+    }
+
+    class Monitor : Rzeczy
+    {
+        public double Cena;
+
+        public Monitor(string nazwa, double cena)
+            : base(nazwa)
+        {
+            this.Cena = cena;
+        }
+
+        public override string Wypisz()
+        {
+            return string.Format("Nazwa monitora: {0}, Cena: {1}", Nazwa, Cena);
+        }
+    }
+}

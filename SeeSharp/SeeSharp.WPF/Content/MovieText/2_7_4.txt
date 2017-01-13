@@ -1,0 +1,7 @@
+Konstruktor to specjalna metoda, która jest wykonywana w chwili tworzenia obiektu, najczęściej służąca do inicjalizacji pól obiektu. Konstruktor musi nazywać się tak samo jak nazwa klasy, w której się znajduje. Konstruktor nie może nic zwracać, a dostęp do konstruktora powinien być publiczny. 
+
+Konstruktor ma za zadanie inicjalizowanie pól klasy domyślnymi wartościami i jest wywoływany w momencie tworzenia klasy. Konstruktor domyślny zostaje dołączony do klasy niejawnie w momencie kompilacji, dzięki temu możliwe jest utworzenie obiektu klasy operatorem new.
+
+Słowo kluczowe this zawiera w sobie referencję do danej instancji klasy w obszarze której jest używany. Przydaje się w momencie przesłaniania nazw zmiennych w konstruktorach i także metodach.
+
+Konstruktory można przeciążać, jak zwykłe metody. W przypadku zdefiniowanego konstruktora nie ma potrzeby, aby były w nim inicjalizowane wszystkie pola, ponieważ te pola, które nie będą jawnie inicjalizowane, będą miały przypisane wartości domyślne, w zależności od typu danej zmiennej.

@@ -1,0 +1,8 @@
+Dziedziczenie to mechanizm wyrażania podobieństw między klasami, dzięki któremu można uprościć definicje klas do już zdefiniowanych. Dziedziczenie daje możliwość ponownego wykorzystania kodu i przyśpiesza czas jego implementacji. Podczas tworzenia nowej klasy, programista może odwołać się do pól i metod klasy/klas już istniejących. Istniejąca klasa nazywana jest klasą bazową, a nowa klasa klasą pochodną.
+
+Z dziedziczeniem pojedynczym mamy do czynienia, gdy klasa pochodna dziedziczy po dokładnie jednej klasie bazowej (oczywiście klasa bazowa wciąż może dziedziczyć z jakiejś innej klasy), natomiast w dziedziczeniu wielokrotnym klas bazowych może być więcej.
+
+Tryby dziedziczenia określone są przez mechanizm hermetyzacji (public, private, protected…):
+- public - nie zmienia w klasie pochodnej trybu dostępu do składowych klasy bazowej;
+- protected - składowe publiczne z klasy bazowej stają się chronionymi w klasy pochodnej;
+- private (lub brak wyszczególnienia trybu dziedziczenia) - wszystkie składowe z klasy     	bazowej stają się prywatnymi w klasie pochodnej.

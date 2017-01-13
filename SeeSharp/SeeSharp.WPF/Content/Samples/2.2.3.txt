@@ -1,0 +1,17 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace stale
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            const int rok = 2016;
+            Console.WriteLine("Za rok już będzie {0} rok!", rok + 1);
+            Console.ReadKey();
+        }
+    }
+}

@@ -1,0 +1,5 @@
+Garbage Collector jest mechanizmem zwalniania nieużywanej pamięci w C#. Garbage Collector zajmuje usuwaniem obiektów ze sterty znajdujących się w pamięci. Obiekty usuwane określane są statusem “martwych”. W ten sposób utrzymywany jest porządek na stercie jednocześnie nie dopuszczająć do przepełnień ani wycieków pamięci.
+
+Twórcy technologii .Net postanowili w ten sposób zadbać o bezpieczeństwo aplikacji oraz zwiększyć ich wydajność.
+
+Garbage Collector jest wywoływane w osobnym wątku automatycznie bez jakiejkolwiek wiedzy programisty. GC skanuje pamięć aplikacji w poszukiwaniu obiektów, do których nie ma referencji. Jeżeli obiekt bez referencji zostanie znaleziony, wówczas jest on usuwany z pamięci procesu. 

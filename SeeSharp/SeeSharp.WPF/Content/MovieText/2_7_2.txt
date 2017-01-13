@@ -1,0 +1,7 @@
+Właściwość jest konstrukcją charakterystyczną dla języka C sharp. Zapewnia ona właściwość do pól znajdujących się w klasie przy pomocy akcesorów get i set. Główną funkcjonalnością właściwości jest możliwość zapisywania i odczytywania prywatnych pól znajdujących się w klasie, tak jakby były publiczne.
+
+Pola określane są poprzez zmienne deklarowane w klasach.
+
+Właściwość deklarujemy w sposób podobny do deklarowania zmiennej, jednak w jej wnętrzu należy obsłużyć akcesory get i set. Właściwość ma dostęp publiczny i typ taki sam jak pole, którego dotyczy, a w jej ciele definicje obu akcesorów:
+- Akcesor get mówi co ma zostać zwrócone przy odwołaniu właściwości pola (użyto danej właściwości “do odczytu”);
+- Akcesor set mówi co ma stać się wartością przypisaną do właściwości pola (użyto danej właściwości “do zapisu”).

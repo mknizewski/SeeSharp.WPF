@@ -1,0 +1,8 @@
+Pętle są instrukcjami pozwalającymi na cykliczne wykonywanie tego samego fragmentu kodu. Głównie pętle wykorzystujemy do wykonywania określonych sekwencji bloków kodu, które chcemy wykonać wielokrotnie, przykładowo przy obróbce kolejnych serii danych. 
+
+W pętli for występuje zmienna, która określana jest licznikiem pętli, lub zmienną sterującą. Dzięki tej zmiennej istnieje możliwość określania, ile razy ma się wykonać pętla. Oprócz licznika pętli, kluczowe znaczenie ma wyrażenie logiczne zawarte w for(), które decyduje, czy pętla się wykona czy też nie; oraz polecenia wykonywane w samej pętli.
+
+Kolejne kroki w pętli for określane są poprzez:
+- krok inicjalizacji wykonywany w pierwszej kolejności (tylko raz). Krok ten pozwala na zadeklarowanie zmiennej, początkowej wartości licznika pętli
+- kolejny krok jest krokiem w którym jest sprawdzane czy zaszło wyrażenie logiczne, które wykorzystuje wartość licznika pętli. Jeśli warunek jest spełniony (true) to wykonaj polecenia zawarte w ciele pętli, po czym zmień wartość licznika pętli w sekcji iteracyjnej;
+- jeżeli zaś wyrażenie logiczne jest nieprawdziwe (zwraca false) to zakończ działanie pętli for; 

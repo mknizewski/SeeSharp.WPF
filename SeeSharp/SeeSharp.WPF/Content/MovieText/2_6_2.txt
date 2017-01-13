@@ -1,0 +1,7 @@
+Tablice przechowują określoną z góry ilość danych tego samego typu. Ponieważ tablice służą do przechowywania grupy danych (które mogą być liczne i zajmować dużo miejsca w pamięci) tablice umieszcza się na stercie, jako obiekty. Tablice mają zatem typ referencyjny.
+
+Tablice dwuwymiarowe można porównać do układu współrzędnych. Aby odwołać się do któregoś z elementów podajemy indeks wiersza (x) oraz indeks kolumny (y).
+
+Elementy wierszy i kolumn indeksowane są od 0. Zatem jeżeli mamy tablicę o wymiarze 4x6 to maksymalny indeks wiersza wyniesie 3 (zakres 0 do 3), a maksymalny indeks kolumny wyniesie 5 (zakres 0 do 4).
+
+Aby zadeklarować tablicę n wymiarową należy zadeklarować n nawiasów kwadratowych (w przypadku tablicy dwuwymiarowej podwójne nawiasy kwadratowe).

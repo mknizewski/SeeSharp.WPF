@@ -1,0 +1,7 @@
+Instrukcje warunkowe pozwalają użytkownikowi na ustalenie jednego lub więcej warunków, od których będzie zależał dalszy ciąg tok programu. 
+
+Po słowie kluczowym if (jeżeli) musi wystąpić wyrażenie logiczne, które należy umieścić w nawiasach okrągłych. Następnie trzeba określić jaki blok kodu/polecenie ma się wykonać po pomyślnym wejściu do warunku (warunek jest prawdziwy jeżeli wyrażenie logiczne zwraca true). [jeśli blok kodu to koniecznie ograniczony nawiasami klamrowymi, jeżeli jedno polecenie nie ma konieczności stosowania nawiasów klamrowych].
+
+Jeżeli chcemy wykonać blok kodu podczas, gdy warunek w if nie zwróci true, możemy wówczas wykorzystać wykonać klauzule else (w przeciwnym wypadku). W klauzuli else nie podajemy już warunku w nawiasach, a jedynie blok kodu lub polecenie, które ma się wykonać.
+
+Klauzule else można używać jednocześnie z klauzula if (else if), w celu sprawdzania wielu warunków jednocześnie (wiemy że tylko jeden z wielu warunków zajdzie).

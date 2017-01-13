@@ -1,0 +1,3 @@
+Pętle są instrukcjami pozwalającymi na cykliczne wykonywanie tego samego fragmentu kodu. Głównie pętle wykorzystujemy do wykonywania określonych sekwencji bloków kodu, które chcemy wykonać wielokrotnie, przykładowo przy obróbce kolejnych serii danych. 
+
+Pętla foreach() służy do obsługi kolekcji (list, słowników, stosów, kolejek, tablic), zbiorów elementów. Deklaracja zmiennej pętli to deklaracja zmiennej, do której będą przypisywane kolejne elementy kolekcji. Zmienna ta jest używana wewnątrz pętli, jak każda inna zmienna. Deklaracja zmiennej pętli wygląda tak, jak deklaracja każdej zmiennej. Typ zmiennej powinien być zgodny z typem elementów kolekcji, w przeciwnym przypadku nie możliwe będzie przypisanie do tej zmiennej kolejnych elementów znajdujących się na kolekcji.

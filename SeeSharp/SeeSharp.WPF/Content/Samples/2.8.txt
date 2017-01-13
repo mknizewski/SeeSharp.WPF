@@ -1,0 +1,59 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Dziedziczenie
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Student stud = new Student("Jan", "Kowalski", 1992, 13579, 4.5);
+            stud.WyswietlDane();
+            Console.ReadKey();
+        }
+    }
+    
+    class Osoba
+    {
+        protected string imie;
+        protected string nazwisko;
+        protected int rok_urodzenia;
+
+        public Osoba(string i, string n, int r)
+        {
+            imie = i;
+            nazwisko = n;
+            rok_urodzenia = r;
+        }
+
+        public void DaneOsoby()
+        {
+            Console.WriteLine("{0} {1} ma {2} lata", imie, nazwisko, 2016 - rok_urodzenia);
+        }
+    }
+
+    class Student : Osoba
+    {
+        public int nr_indexu;
+        public double srednia;
+
+        public Student(string i, string n, int r, int nr_ind, double s) : base(i ,n, r)
+        {
+            nr_indexu = nr_ind;
+            srednia = s;
+        }
+
+        public void WypiszSrednia()
+        {
+            Console.WriteLine("Student o numerze indexu {0} ma średnią {1}", nr_indexu, srednia);
+        }
+
+        public void WyswietlDane()
+        {
+            base.DaneOsoby();
+            WypiszSrednia();
+        }
+    }
+}

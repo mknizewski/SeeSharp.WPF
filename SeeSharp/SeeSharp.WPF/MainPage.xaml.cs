@@ -87,7 +87,7 @@ namespace SeeSharp.WPF
         public void SetAchivmentAlert(Achivments achivments)
         {
             ServerServiceClient serverService = ServerServiceClient.GetInstance();
-            List<int> achivList = serverService.GetAchivmentFile(UserManager.UserInfo.Login).ToList();
+            int[] achivList = serverService.GetAchivmentFile(UserManager.UserInfo.Login);
 
             int achivId = (int)achivments;
             if (achivList != null)

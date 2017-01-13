@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Operatory_inne
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int tmp1, tmp2;
+            tmp1 = 5; tmp2 = 10;
+            Console.WriteLine(tmp1 == tmp2);
+            Console.WriteLine(tmp1 < tmp2);
+            Console.WriteLine(tmp1 > tmp2);
+            Console.WriteLine(tmp1 <= tmp2);
+            Console.WriteLine(tmp1 >= tmp2);
+            Console.WriteLine(tmp1 != tmp2);
+
+            tmp1 = 30;
+            string war = tmp1 > 100 ? "dużo" : "mało";
+            Console.WriteLine(war);
+            Console.ReadKey();
+        }
+    }
+}

@@ -1,0 +1,10 @@
+C sharp ma do zaoferowania wiele sposobów wyświetlania wartości:
+- {O:C} - służy do formatowania waluty
+- {0:E} - służy do wyświetlania liczby w notacji wykładniczej
+- {0:Dn} - służy do wyświetlania liczby dziesiętnej, gdzie n to minimalna ilość cyfr w wyświetlanej liczbie;
+- {0:Fn} - służy do wyświetlania liczby z n ilością miejsc po przecinku;
+- {0:X} - służy do wyświetlania liczby w systemie szesnastkowym;
+- {0:d} - służy do wyświetlania dnia;
+- {0:t} - służy do wyświetlania godziny;
+- {0:P} - służy do wyświetlania procentów;
+- {0:Nm} - służy do wyświetlania numeru, gdzie m to ilość miejsc po przecinku.

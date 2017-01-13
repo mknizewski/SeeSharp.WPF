@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Instrukcja_switch
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string twojaLiczbaText;
+            int twojaLiczba;
+            Console.Write("Podaj liczbę z zakresu od 0 do 2: ");
+            twojaLiczbaText = Console.ReadLine();
+            twojaLiczba = int.Parse(twojaLiczbaText);
+            switch (twojaLiczba)
+            {
+                case 0:
+                    Console.WriteLine("Twoja liczba to {0}", twojaLiczba);
+                    break;
+                case 1:
+                    Console.WriteLine("Twoja liczba to {0}", twojaLiczba);
+                    break;
+                case 2:
+                    Console.WriteLine("Twoja liczba to {0}", twojaLiczba);
+                    break;
+                default:
+                    Console.WriteLine("Twoja liczba przekracza poza zadany zakres!");
+                    break;
+            }
+            Console.ReadKey();
+        }
+    }
+}

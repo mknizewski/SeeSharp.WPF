@@ -1,0 +1,12 @@
+Operatorem określamy jeden lub kilka znaków, które są wykorzystywane w języku programowania na każdym kroku.
+
+Operatorem porównania (inaczej relacji) określamy operatory służące do porównania dwóch zmiennych i zawsze dają wynik true lub false:
+- Równy (==);
+- Różny (!=);
+- Mniejszy (<);
+- Większy (>);
+- Mniejszy równy (<=);
+- Większy równy (>=) . 
+
+Operator warunkowy pozwala na sprawdzenie wyrażenia logicznego, które jest zapisane z lewej strony operatora w nawiasach okrągłych. Jeśli spełnione jest wyrażenie logiczne to operator warunkowy zwraca wyrażenie1, w przeciwnym wypadku zwraca wyrażenie drugie:
+- (wyrażenie logiczne)? wyrażenie1 : wyrażenie2

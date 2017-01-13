@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace metody
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string pierwszy_wyraz = "jestem programistą";
+            string drugi_wyraz = "piszę w języku c sharp";
+            string porównanie;
+
+            CiągZnaków c1 = new CiągZnaków();
+            porównanie = c1.ZnajdźDłuższeSłowo(pierwszy_wyraz, drugi_wyraz);
+
+            Console.WriteLine("Dłuższym wyrazem jest: {0}", porównanie);
+            Console.ReadKey();
+        }
+    }
+
+    class CiągZnaków
+    {
+        public string ZnajdźDłuższeSłowo(string w1, string w2)
+        {
+            string wynik;
+
+            if (w1.Length > w2.Length)
+                wynik = "Wyraz pierwszy";
+            else if (w1.Length < w2.Length)
+                wynik = "Wyraz drugi";
+            else
+                wynik = "Wyrazy są tej samej długości";
+
+            return wynik;
+        }
+    }
+}

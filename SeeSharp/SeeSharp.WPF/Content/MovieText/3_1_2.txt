@@ -1,0 +1,5 @@
+Klonowanie służy do utworzenia kopii istniejącego obiektu, w ten sposób tworząc nową instancję obiektu, tego samego typu co obiekt, na rzecz którego metoda została wywołana, zachowując wszystkie pola wewnętrzne w tej samej formie.
+
+W uproszczeniu kopiowanie referencji do obiektu jest to skopiowanie adresu w pamięci do którego odwołuje się istniejący obiekt.
+
+Głębokiej kopii używa się w przypadku, gdy klasa obiektu, którą chcemy skopiować ma pola referencyjne. Wówczas metoda MeberwiseClone(), w zupełności nie wystarcza. Należy stworzyć metodę GlebokaKopia() która zwraca obiekt tymczasowy z metody. Do tego obiektu następnie zostaną skopiowana wszyskie potrzebne wartości.

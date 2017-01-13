@@ -1,0 +1,5 @@
+Typy generyczne są to konstrukcje udostępniające wielopostaciowość (z typem <T>). Typy generyczne znajdują się w przestrzeni nazw System.Collections.Generic. Umożliwiają one deklarowanie, jakiego typu elementy mają znajdować się w zdefiniowanej kolekcji.
+
+Główną zaletą jest przyspieszenie działania kolekcji. Podczas dodawania elementu nie jest o rzutowany na typ obiektowy, a podczas pobierania elementu z kolekcji nie musimy go z powrotem rzutować na odpowiedni typ. Uniknięcie tych operacji znacząco przyspiesza działanie programu.
+
+Deklarowanie kolekcji generycznej różni się tym że musimy dodatkowo w nawiasach ostrych <> określić typ elementów znajdujących się na zdefiniowanej kolekcji.

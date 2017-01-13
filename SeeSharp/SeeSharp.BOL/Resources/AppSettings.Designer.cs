@@ -134,7 +134,7 @@ namespace SeeSharp.BOL.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to /Content/Samples/{0}.txt.
+        ///   Looks up a localized string similar to Content\Samples\{0}.txt.
         /// </summary>
         internal static string ProgramFilesDirectory {
             get {

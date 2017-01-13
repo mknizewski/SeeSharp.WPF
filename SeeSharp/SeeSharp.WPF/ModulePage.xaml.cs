@@ -94,9 +94,6 @@ namespace SeeSharp.WPF
             ServerServiceClient serviceClient = ServerServiceClient.GetInstance();
             this.ModuleTextBox.Text = serviceClient.GetModuleText(pathToTextModule);
 
-            string pathToTemplateProgram = string.Format(AppSettingsDictionary.ProgramFilesDirectory, _moduleManager.CurrentModule.ModuleTag);
-            //this.ProgramDownloadLink.NavigateUri = new Uri(HtmlPage.Document.DocumentUri, pathToTemplateProgram);
-
             this.PervModule.IsEnabled = !_moduleManager.First;
             this.NextModule.IsEnabled = !_moduleManager.Last;
 
@@ -329,6 +326,19 @@ namespace SeeSharp.WPF
         public void ChangeScreen()
         {
             
+        }
+
+        private void ProgramDownloadLink_Click(object sender, RoutedEventArgs e)
+        {
+            string pathToTemplateProgram = string.Concat(
+                AppDomain.CurrentDomain.BaseDirectory,
+                string.Format(
+                    AppSettingsDictionary.ProgramFilesDirectory,
+                    _moduleManager.CurrentModule.ModuleTag
+                    )
+                );
+
+            Process.Start("notepad.exe", pathToTemplateProgram);
         }
     }
 }

@@ -49,7 +49,7 @@
                         <TextBlock x:Name="errorText" Grid.Row="3" Foreground="Red" TextWrapping="Wrap" Visibility="Collapsed" />
                     </Grid>
                 </Grid>
-                <Button x:Name="ProgramDownloadLink"  Width="140" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20 5 20 0">Pokaż program z video</Button>
+                <Button Cursor="Hand" Click="ProgramDownloadLink_Click" x:Name="ProgramDownloadLink"  Width="140" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20 5 20 0">Pokaż program z video</Button>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="20 10 20 10">
                     <Button x:Name="MainPage" Click="MainPage_Click" Cursor="Hand" Width="100" Height="65">
                         <Button.Effect>

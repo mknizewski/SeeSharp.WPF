@@ -1,0 +1,3 @@
+Stałe są to zmienne, które nie podlegają modyfikacji. Aby zadeklarować stałą używamy słowa const typ nazwa = wartość. Raz już zadeklarowanej wartości nie możemy potem zmieniać w programie. Będzie to skutkować błędem programu. 
+
+Aby zapobiec błędom w programie, podczas wyświetlania zmiennej możemy dokonać operację na tej zmiennej podczas wyświetlania, lecz zmienna w pamięci wciąż będzie miała stałą, niezmienną, zadeklarowaną wcześniej wartość.

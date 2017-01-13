@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Instrukcja_if
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int warunek = 10;
+            if (warunek < 20)
+            {
+                Console.WriteLine("{0} jest mniejsze od 20", warunek);
+            }
+            else
+            {
+                Console.WriteLine("{0} jest większe/równe 20", warunek);
+            }
+
+            warunek = 15;
+            if (warunek == 10)
+                Console.WriteLine("{0} jest równe 10", warunek);
+            else if (warunek < 10)
+                Console.WriteLine("{0} jest mniejsze od 10", warunek);
+            else if (warunek > 10)
+                Console.WriteLine("{0} jest większe od 10", warunek);
+           
+            Console.ReadKey();
+        }
+    }
+}

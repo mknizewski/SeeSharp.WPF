@@ -1,0 +1,36 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Kolekcje
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] tab = { "Jan", "Józef", "Zbyszek", "Damian", "Kazimierz" };
+            ArrayList lista = new ArrayList();
+
+            foreach (string x in tab)
+                lista.Add(x);
+
+            lista.Sort();
+
+            foreach (Object obj in lista)
+                Console.WriteLine(obj);
+
+            Console.WriteLine("Ilość obiektów na liście: " + lista.Count);
+            lista.RemoveAt(2);
+            lista.Remove("Damian");
+
+            Console.WriteLine("\nIlość obiektów znajdujących się na liście po dokonaniu metod Remove: " + lista.Count);
+            Console.WriteLine("Są to: ");
+            foreach (Object obj in lista)
+                Console.WriteLine(obj);
+
+            Console.ReadKey();
+        }
+    }
+}

@@ -1,0 +1,7 @@
+Tablice przechowują określoną z góry ilość danych tego samego typu. Ponieważ tablice służą do przechowywania grupy danych (które mogą być liczne i zajmować dużo miejsca w pamięci) tablice umieszcza się na stercie jako obiekty. Tablice mają zatem typ referencyjny.
+
+Aby móc używać w programie tablicy należy zadeklarować zmienną tablicową oraz utworzyć samą tablicę (obiekt tablicy). Istnieje kilka możliwości deklarowania tablic, które są przedstawione w nagranym filmie poniżej. W trakcie deklarowania tablicy muszą wystąpić nawiasy kwadratowe (w przypadku tablicy jednowymiarowej pojedyncze nawiasy kwadratowe).
+
+Tablice jednowymiarowe można porównać do osi liczbowej. Aby odwołać się do któregoś z elementów znajdujących się na tablicy, wystarczy podać jej współrzędną. Należy pamiętać, że w danej pozycji znajduje się tylko jedna wartość.
+
+Elementy tablicy indeksowane są od 0. Zatem jeżeli tablica ma rozmiar równą 6, to maksymalny indeks tablicy będzie wynosił 5, ponieważ zakres od 0 do 5 wynosi 6 elementów.

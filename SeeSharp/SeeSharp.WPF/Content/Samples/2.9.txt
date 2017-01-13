@@ -1,0 +1,58 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Polimorfizm
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            WyswietlDane dane = new WyswietlDane();
+            dane.Wypisz(2016);
+            dane.Wypisz(15.5);
+            dane.Wypisz('x');
+            dane.Wypisz("Kurs c sharp");
+            dane.Wypisz(true);
+            int[] tab = new int[] { 1, 3, 5, 7, 9 };
+            dane.Wypisz(tab);
+            Console.ReadKey();
+        }
+    }
+
+    class WyswietlDane
+    {
+        public void Wypisz(int calkowita)
+        {
+            Console.WriteLine("Wyświetlam liczbę całkowitą: {0}", calkowita);
+        }
+
+        public void Wypisz(double zmiennoprzec)
+        {
+            Console.WriteLine("Wyświetlam liczbę zmiennoprzecinkową: {0}", zmiennoprzec);
+        }
+
+        public void Wypisz(char znak)
+        {
+            Console.WriteLine("Wyświetlam znak: {0}", znak);
+        }
+
+        public void Wypisz(string tekst)
+        {
+            Console.WriteLine("Wyświetlam tekst: {0}", tekst);
+        }
+
+        public void Wypisz(bool zmiennalog)
+        {
+            Console.WriteLine("Wyświetlam zmienną logiczną: {0}", zmiennalog);
+        }
+
+        public void Wypisz(int[] tablica)
+        {
+            Console.Write("Wyświetlam tablicę jednowymiarową: ");
+            for (int i = 0; i < tablica.Length; i++)
+                Console.Write(tablica[i] + " ");
+        }
+    }
+}

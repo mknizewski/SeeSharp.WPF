@@ -1,0 +1,5 @@
+Aby rozpocząć swoją przygodę z programowaniem w języku C# należy przejść do strony www.visualstudio.com. Następnie wybrać zakładkę downloads i ściągnąć darmową wersję oprogramowania Visual Studio Community klikając w opcję Free Download.
+
+Jeżeli jesteśmy zainteresowani pełną wersją oprogramowania to należy przejść na swoje konto dreamspark założone przez twoją uczelnię. Następnie należy pobrać Visual Studio ze strony Dreamsparka. 
+
+W przypadku UwB szczegółowe informacje odnośnie założenia swojego konta na Dreamsparku oraz logowania znajdują się na stronie głównej uczelni: http://ii.uwb.edu.pl/index.php?p=994.
