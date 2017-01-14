@@ -168,6 +168,7 @@ namespace SeeSharp.WPF
 
             this.media.MediaOpened += this.MediaOpened;
             this.media.MediaFailed += this.MediaFailed;
+            this.media.LoadedBehavior = MediaState.Stop;
 
             this.UpdateStatusText();
             this.UpdatePlayPauseButton();
