@@ -5,16 +5,16 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:SeeSharp.WPF"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="800" d:DesignWidth="400">
     <Grid x:Name="LayoutRoot">
         <ScrollViewer>
             <StackPanel Orientation="Vertical">
-                <TextBlock x:Name="GreetingsTextBlock" Text="Pozdrowienia" FontFamily="Open Sans" FontSize="32" />
-                <TextBlock Text="Konto:" FontFamily="OpenSans" FontSize="32" Margin="0 0 0 5" x:Name="AccountNameTextBlock" />
+                <TextBlock x:Name="GreetingsTextBlock" Text="Pozdrowienia" FontFamily="Open Sans" FontSize="32" Margin="5 0 0 0" />
+                <TextBlock Text="Konto:" FontFamily="OpenSans" FontSize="32" Margin="5 0 0 5" x:Name="AccountNameTextBlock" />
                 <TextBlock Text="Twój kod: {0}" FontFamily="Open Sans" Margin="10 0 0 0" FontSize="16" x:Name="CodeTextBlock" />
                 <TextBlock Text="Procent ukończenia: {0}%" FontFamily="Open Sans" Margin="10 0 0 0" FontSize="16" x:Name="PercentageTextBlock" />
                 <TextBlock Text="Ostatnio ukończony moduł: {0}" FontFamily="Open Sans" Margin="10 0 0 0" FontSize="16" x:Name="LastModuleTextBlock" />
-                <TextBlock Text="Kurs: " FontFamily="Open Sans" FontSize="32" Margin="0 0 0 10" />
+                <TextBlock Text="Kurs: " FontFamily="Open Sans" FontSize="32" Margin="5 0 0 10" />
                 <TreeView x:Name="Menu" Margin="10 0 10 0">
                     <TreeViewItem Header="Poradnik .NET" IsExpanded="True" Cursor="Hand">
                         <TreeViewItem Header="1. O programowaniu w .NET" MouseLeftButtonUp="LoadInnerModule_Click">
@@ -99,11 +99,11 @@
                         </StackPanel>
                     </Grid>
                 </Border>
-                <TextBlock Text="Ustawienia:" FontFamily="OpenSans" Margin="0 5 0 0 " FontSize="32" />
+                <TextBlock Text="Ustawienia:" FontFamily="OpenSans" Margin="5 5 0 0 " FontSize="32" />
                 <StackPanel Orientation="Horizontal">
                     <Button Visibility="Collapsed" x:Name="DeleteAccountButton" Click="DeleteAccountButton_Click" Cursor="Hand" MaxWidth="100" Margin="5 0 10 0">Usuń konto</Button>
                     <Button Visibility="Collapsed" x:Name="NewModuleButton" Click="NewModuleButton_Click" Cursor="Hand" MaxWidth="125" Margin="0 0 10 0">Ustawienia domyślne</Button>
-                    <Button x:Name="ReturnToModuleButton" Click="ReturnToModuleButton_Click" Cursor="Hand" MaxWidth="125">Powrót do kursu</Button>
+                    <Button Margin="10 5 0 10" x:Name="ReturnToModuleButton" Click="ReturnToModuleButton_Click" Cursor="Hand" MaxWidth="125">Powrót do kursu</Button>
                 </StackPanel>
             </StackPanel>
         </ScrollViewer>

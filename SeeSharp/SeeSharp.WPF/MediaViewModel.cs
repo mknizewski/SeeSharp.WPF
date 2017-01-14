@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace SeeSharp.WPF
@@ -14,6 +15,10 @@ namespace SeeSharp.WPF
 
             this.PositionChanged += (s, e) => this.UpdatePositionInfo();
         }
+
+        public static readonly DependencyProperty PositionProperty =
+            DependencyProperty.Register(nameof(Position), typeof(TimeSpan),
+                typeof(MediaElement), new FrameworkPropertyMetadata());
 
         private TimeSpan _position;
 

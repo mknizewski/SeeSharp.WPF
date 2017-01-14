@@ -15,7 +15,7 @@
                     <RowDefinition Height="50"></RowDefinition>
                     <RowDefinition Height="50"></RowDefinition>
                     <RowDefinition Height="50"></RowDefinition>
-                    <RowDefinition Height="35"></RowDefinition>
+                    <RowDefinition Height="45"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Viewbox Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="500" MaxHeight="500">
                     <Image Source="Images/w_uwb_kolor.png" />
@@ -24,7 +24,7 @@
                 <TextBlock Grid.Row="2" HorizontalAlignment="Left" Margin="25 0 0 0" VerticalAlignment="Center" Text="Mateusz Kniżewski - Kierownik, Programista" FontFamily="Open Sans" FontSize="16" />
                 <TextBlock Grid.Row="3" HorizontalAlignment="Left" Margin="25 0 0 0" VerticalAlignment="Center" Text="Piotr Aleksandrowicz - Grafik" FontFamily="Open Sans" FontSize="16" />
                 <TextBlock Grid.Row="4" HorizontalAlignment="Left" Margin="25 0 0 0" VerticalAlignment="Center" Text="Łukasz Wesołowski - Programista" FontFamily="Open Sans" FontSize="16" />
-                <TextBlock Grid.Row="5" x:Name="CopyrightInformation" HorizontalAlignment="Right" Text="Copyright" Margin="0 0 25 10" VerticalAlignment="Center" FontFamily="Open Sans" FontSize="16" />
+                <TextBlock Grid.Row="5" x:Name="CopyrightInformation" HorizontalAlignment="Right" Text="Copyright" Margin="0 0 0 10" VerticalAlignment="Center" FontFamily="Open Sans" FontSize="16" />
             </Grid>
         </ScrollViewer>
     </Grid>

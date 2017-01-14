@@ -10,6 +10,7 @@ using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Threading;
 
 namespace SeeSharp.WPF
 {
@@ -43,6 +44,28 @@ namespace SeeSharp.WPF
             BeginCourseIfNotStarted();
             UpdateUserCourseAndUI();
             SetAchivmentIfNessesary();
+
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromMilliseconds(30.0);
+            timer.Tick += Timer_Tick;
+            timer.Start();
+
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            if (this.media.Source != null)
+            {
+                this.UpdatePlayBar();
+                this.UpdatePosition();
+                this.UpdatePlayPauseButton();
+            }
+        }
+
+        private void UpdatePosition()
+        {
+            if (media.NaturalDuration.HasTimeSpan)
+                positionText.Text = String.Format("{0}", media.Position.ToString(@"mm\:ss"));
         }
 
         private void AdjustMediaMaxResolution(Size size)
@@ -146,10 +169,6 @@ namespace SeeSharp.WPF
 
             this.media.MediaOpened += this.MediaOpened;
             this.media.MediaFailed += this.MediaFailed;
-            //this.media.CurrentStateChanged += this.MediaCurrentStateChanged;
-            
-            this._viewModel.PositionChanged += PositionChanged;
-            //this.media.DownloadProgressChanged += (s, e) => this.UpdateBufferBar();
 
             this.UpdateStatusText();
             this.UpdatePlayPauseButton();
@@ -164,7 +183,7 @@ namespace SeeSharp.WPF
         private void MediaOpened(object sender, RoutedEventArgs e)
         {
             this._viewModel.UpdateDurationInfo();
-            this.RestorePervousVideoPosition();
+            //this.RestorePervousVideoPosition();
         }
 
         private void playPauseButton_Click(object sender, RoutedEventArgs e)
@@ -172,16 +191,16 @@ namespace SeeSharp.WPF
             var buttonState = (ButtonState)this.playPauseButton.Tag;
             if (buttonState == ButtonState.Play)
             {
-                media.Play();
+                media.LoadedBehavior = MediaState.Play;
             }
             else if (buttonState == ButtonState.Pause)
             {
-                media.Pause();
+                media.LoadedBehavior = MediaState.Pause;
             }
             else if (buttonState == ButtonState.Restart)
             {
-                media.Stop();
-                media.Play();
+                media.LoadedBehavior = MediaState.Stop;
+                media.LoadedBehavior = MediaState.Play;
             }
         }
 
@@ -213,8 +232,11 @@ namespace SeeSharp.WPF
 
         private void UpdatePlayBar()
         {
-            if (media.NaturalDuration.TimeSpan != TimeSpan.Zero)
-                playBar.Width = media.Position.TotalMilliseconds / media.NaturalDuration.TimeSpan.TotalMilliseconds * playCanvas.ActualWidth;
+            if (media.NaturalDuration.HasTimeSpan)
+            {
+                if (media.NaturalDuration.TimeSpan != TimeSpan.Zero)
+                    playBar.Width = media.Position.TotalMilliseconds / media.NaturalDuration.TimeSpan.TotalMilliseconds * playCanvas.ActualWidth;
+            }
         }
 
         private void UpdateBufferBar()
@@ -358,6 +380,11 @@ namespace SeeSharp.WPF
 
                 root.SetAlert(PageDictionary.FileNotAvaliable);
             }
+        }
+
+        private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            this.media.Volume = this.mediaVolume.Value * 10;
         }
     }
 }
