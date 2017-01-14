@@ -1,8 +1,8 @@
-﻿using System;
+﻿using SeeSharp.BO.Dictionaries;
+using SeeSharp.BO.Managers;
+using System;
 using System.Windows;
 using System.Windows.Media.Imaging;
-using SeeSharp.BO.Managers;
-using SeeSharp.BO.Dictionaries;
 
 namespace SeeSharp.WPF
 {

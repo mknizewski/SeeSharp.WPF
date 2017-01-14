@@ -2,11 +2,9 @@
 using SeeSharp.BO.Managers;
 using SeeSharp.Infrastructure;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Media;
 
 namespace SeeSharp.WPF
 {
@@ -25,7 +23,6 @@ namespace SeeSharp.WPF
             this.AppVersion.Text = string.Format(AppSettingsDictionary.AppVersionMessagePattern, AppSettingsDictionary.AppVersion);
         }
 
-
         private void AboutAuthors_Click(object sender, RoutedEventArgs e)
         {
             SetView(ViewType.AboutAuthors, NavigationDictionary.AboutAuthorsView);
@@ -38,7 +35,7 @@ namespace SeeSharp.WPF
 
         private void Grid_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-           SetView(ViewType.WelcomePage, NavigationDictionary.WelcomePageView);
+            SetView(ViewType.WelcomePage, NavigationDictionary.WelcomePageView);
         }
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
@@ -48,7 +45,7 @@ namespace SeeSharp.WPF
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
-           SetView(ViewType.Login, NavigationDictionary.LoginPageView);
+            SetView(ViewType.Login, NavigationDictionary.LoginPageView);
         }
 
         private void AboutCourse_Click(object sender, RoutedEventArgs e)
@@ -80,7 +77,7 @@ namespace SeeSharp.WPF
             MessageBox.Show(
                 message,
                 AppSettingsDictionary.AlertTitle,
-                MessageBoxButton.OK, 
+                MessageBoxButton.OK,
                 MessageBoxImage.Information);
         }
 
@@ -151,7 +148,7 @@ namespace SeeSharp.WPF
                 {
                     UIElement element = this.LayoutRoot.Children[fullScreenIndex];
 
-                   if (element is ModulePage)
+                    if (element is ModulePage)
                         (element as ModulePage).ChangeScreen();
                 }
                 catch (ArgumentOutOfRangeException)

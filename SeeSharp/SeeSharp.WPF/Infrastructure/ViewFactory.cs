@@ -6,6 +6,8 @@ namespace SeeSharp.Infrastructure
 {
     public static class ViewFactory
     {
+        public static MainPage MainPage;
+
         public static UserControl GetView(ViewType viewType)
         {
             switch (viewType)

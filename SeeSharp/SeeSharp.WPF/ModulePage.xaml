@@ -1,16 +1,16 @@
 ﻿<UserControl x:Class="SeeSharp.WPF.ModulePage"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:SeeSharp.WPF"
-             mc:Ignorable="d" 
+             mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid x:Name="LayoutRoot" SizeChanged="LayoutRoot_SizeChanged">
         <ScrollViewer x:Name="Scroll" BorderBrush="{x:Null}" BorderThickness="0">
             <StackPanel Orientation="Vertical" x:Name="Stack">
                 <TextBlock x:Name="ModuleTitle" FontFamily="Open Sans" FontSize="32" Text="Title" HorizontalAlignment="Center" />
-                <TextBox x:Name="ModuleTextBox" AcceptsReturn="True" TextWrapping="Wrap" IsReadOnly="True" FontFamily="Open Sans" FontSize="16" Margin="20 10 20 10"  />
+                <TextBox x:Name="ModuleTextBox" AcceptsReturn="True" TextWrapping="Wrap" IsReadOnly="True" FontFamily="Open Sans" FontSize="16" Margin="20 10 20 10" />
                 <Grid Margin="20 0 20 0" x:Name="ModuleGrid">
                     <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
                         <Grid.RowDefinitions>
@@ -22,8 +22,7 @@
 
                         <Border BorderThickness="0" Background="Black">
                             <MediaElement x:Name="media"
-                              Source="http://ecn.channel9.msdn.com/o9/content/smf/progressivecontent/wildlife.wmv"						  
-							   />
+                              Source="http://ecn.channel9.msdn.com/o9/content/smf/progressivecontent/wildlife.wmv" />
                         </Border>
                         <Canvas x:Name="playCanvas" Grid.Row="1" Background="#444444" Height="8" MouseLeftButtonDown="PlayCanvas_MouseLeftButtonUp">
                             <Rectangle x:Name="bufferBar" Fill="#777777" Height="8" Width="0" />
@@ -33,7 +32,7 @@
                         <StackPanel Grid.Row="2" Orientation="Horizontal" Background="#1B1B1B">
                             <Button x:Name="playPauseButton" Style="{StaticResource PlayButtonStyle}" Click="playPauseButton_Click" Cursor="Hand" />
                             <Slider Margin="0 5 0 5" x:Name="mediaVolume" Cursor="Hand" Width="56" Minimum="0" Maximum="1" Value="0.5" Ticks="0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1" IsSnapToTickEnabled="True" ValueChanged="Slider_ValueChanged" />
-                            <TextBlock Margin="6,0,0,0" VerticalAlignment="Center" Style="{StaticResource ProgressTextStyle}">                 
+                            <TextBlock Margin="6,0,0,0" VerticalAlignment="Center" Style="{StaticResource ProgressTextStyle}">
 					            <Run x:Name="positionText" Text="{Binding PositionText}" Foreground="White" />
 					            <Run Text=" / " />
 					            <Run Text="{Binding DurationText}" />

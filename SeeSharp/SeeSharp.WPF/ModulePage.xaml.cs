@@ -5,7 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
@@ -38,7 +37,7 @@ namespace SeeSharp.WPF
         {
             this._moduleManager = ModuleManager.GetModuleManager(tag);
             this._isFullScreen = false;
-            
+
             InitializeComponent();
             InitializeView();
             InitializeModule();
@@ -50,7 +49,6 @@ namespace SeeSharp.WPF
             timer.Interval = TimeSpan.FromMilliseconds(30.0);
             timer.Tick += Timer_Tick;
             timer.Start();
-
         }
 
         private void Timer_Tick(object sender, EventArgs e)
@@ -345,6 +343,7 @@ namespace SeeSharp.WPF
 
         private void fullScreenButton_Click(object sender, RoutedEventArgs e)
         {
+            ChangeScreen();
             _isFullScreen = !_isFullScreen;
         }
 
@@ -359,7 +358,19 @@ namespace SeeSharp.WPF
 
         public void ChangeScreen()
         {
-            
+            WindowPage page = (WindowPage)App.Current.MainWindow;
+            MainPage root = page.MainPage;
+
+            if (_isFullScreen)
+            {
+                page.WindowState = WindowState.Normal;
+                page.WindowStyle = WindowStyle.SingleBorderWindow;
+            }
+            else
+            {
+                page.WindowState = WindowState.Maximized;
+                page.WindowStyle = WindowStyle.None;
+            }
         }
 
         private void ProgramDownloadLink_Click(object sender, RoutedEventArgs e)

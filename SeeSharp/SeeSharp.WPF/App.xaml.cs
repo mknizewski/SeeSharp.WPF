@@ -1,7 +1,5 @@
-﻿using SeeSharp.Infrastructure;
+﻿using SeeSharp.BO.Managers;
 using System.Windows;
-using System.Windows.Controls;
-using SeeSharp.BO.Managers;
 
 namespace SeeSharp.WPF
 {
@@ -21,12 +19,10 @@ namespace SeeSharp.WPF
 
         private void App_Exit(object sender, ExitEventArgs e)
         {
-            
         }
 
         private void App_Startup(object sender, StartupEventArgs e)
         {
-           
         }
 
         private void ConfigureApp()
