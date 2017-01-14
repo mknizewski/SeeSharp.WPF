@@ -21,10 +21,10 @@
                     <Image Source="Images/w_uwb_kolor.png" />
                 </Viewbox>
                 <TextBlock Grid.Row="1" HorizontalAlignment="Left" Margin="5 0 0 0" VerticalAlignment="Center" Text="Autorzy:" FontFamily="Open Sans" FontSize="24" />
-                <TextBlock Grid.Row="2" HorizontalAlignment="Left" Margin="25 0 0 0" VerticalAlignment="Center" Text="Mateusz Kniżewski - Project Manager, Software Developer" FontFamily="Open Sans" FontSize="16" />
-                <TextBlock Grid.Row="3" HorizontalAlignment="Left" Margin="25 0 0 0" VerticalAlignment="Center" Text="Piotr Aleksandrowicz - Designer" FontFamily="Open Sans" FontSize="16" />
-                <TextBlock Grid.Row="4" HorizontalAlignment="Left" Margin="25 0 0 0" VerticalAlignment="Center" Text="Łukasz Wesołowski - Software Developer" FontFamily="Open Sans" FontSize="16" />
-                <TextBlock Grid.Row="5" x:Name="CopyrightInformation" HorizontalAlignment="Right" Text="Copyright" Margin="0 0 25 0" VerticalAlignment="Center" FontFamily="Open Sans" FontSize="16" />
+                <TextBlock Grid.Row="2" HorizontalAlignment="Left" Margin="25 0 0 0" VerticalAlignment="Center" Text="Mateusz Kniżewski - Kierownik, Programista" FontFamily="Open Sans" FontSize="16" />
+                <TextBlock Grid.Row="3" HorizontalAlignment="Left" Margin="25 0 0 0" VerticalAlignment="Center" Text="Piotr Aleksandrowicz - Grafik" FontFamily="Open Sans" FontSize="16" />
+                <TextBlock Grid.Row="4" HorizontalAlignment="Left" Margin="25 0 0 0" VerticalAlignment="Center" Text="Łukasz Wesołowski - Programista" FontFamily="Open Sans" FontSize="16" />
+                <TextBlock Grid.Row="5" x:Name="CopyrightInformation" HorizontalAlignment="Right" Text="Copyright" Margin="0 0 25 10" VerticalAlignment="Center" FontFamily="Open Sans" FontSize="16" />
             </Grid>
         </ScrollViewer>
     </Grid>
