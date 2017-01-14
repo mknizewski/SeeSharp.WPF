@@ -32,7 +32,7 @@
 
                         <StackPanel Grid.Row="2" Orientation="Horizontal" Background="#1B1B1B">
                             <Button x:Name="playPauseButton" Style="{StaticResource PlayButtonStyle}" Click="playPauseButton_Click" Cursor="Hand" />
-                            <Slider x:Name="mediaVolume" Cursor="Hand" Style="{StaticResource VolumeSlider}" Width="56" Minimum="0" Maximum="10" Value="5" ValueChanged="Slider_ValueChanged" />
+                            <Slider Margin="0 5 0 5" x:Name="mediaVolume" Cursor="Hand" Width="56" Minimum="0" Maximum="1" Value="0.5" Ticks="0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1" IsSnapToTickEnabled="True" ValueChanged="Slider_ValueChanged" />
                             <TextBlock Margin="6,0,0,0" VerticalAlignment="Center" Style="{StaticResource ProgressTextStyle}">                 
 					            <Run x:Name="positionText" Text="{Binding PositionText}" Foreground="White" />
 					            <Run Text=" / " />

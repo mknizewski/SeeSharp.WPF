@@ -25,6 +25,7 @@ namespace SeeSharp.WPF
         private const double Height480p = 480.0;
         private const double OneModuleFinished = 3.0;
         private const int CourseFinished = 100;
+        private const string NotepadExecutable = "notepad.exe";
 
         private ModuleManager _moduleManager;
         private TimeSpan _currentVideoSpan;
@@ -372,7 +373,7 @@ namespace SeeSharp.WPF
                 );
 
             if (File.Exists(pathToTemplateProgram))
-                Process.Start("notepad.exe", pathToTemplateProgram);
+                Process.Start(NotepadExecutable, pathToTemplateProgram);
             else
             {
                 WindowPage page = (WindowPage)App.Current.MainWindow;
@@ -384,7 +385,7 @@ namespace SeeSharp.WPF
 
         private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            this.media.Volume = this.mediaVolume.Value * 10;
+            this.media.Volume = this.mediaVolume.Value;
         }
     }
 }
