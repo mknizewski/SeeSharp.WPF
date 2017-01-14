@@ -6,7 +6,8 @@
              xmlns:local="clr-namespace:SeeSharp.WPF"
              mc:Ignorable="d" 
              Width="400" Height="300"
-           Title="Osiągnięcie odblokowane!" ResizeMode="NoResize" ShowInTaskbar="False" Topmost="True" WindowStartupLocation="CenterOwner">
+           Title="Osiągnięcie odblokowane!" ResizeMode="NoResize" ShowInTaskbar="False" Topmost="True" WindowStartupLocation="CenterOwner"
+            Icon="icon.ico">
     <Grid x:Name="LayoutRoot" Margin="2">
         <Grid.RowDefinitions>
             <RowDefinition />

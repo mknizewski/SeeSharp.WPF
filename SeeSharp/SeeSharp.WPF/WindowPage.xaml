@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SeeSharp.WPF"
         mc:Ignorable="d"
-        Title="Przewodnik .NET" Height="650" Width="1250" WindowStartupLocation="CenterScreen">
+        Title="Przewodnik .NET" Height="650" Width="1250" WindowStartupLocation="CenterScreen"
+        Icon="icon.ico">
     <Grid x:Name="LayoutRoot">
         <local:MainPage x:Name="MainPage"></local:MainPage>
     </Grid>
