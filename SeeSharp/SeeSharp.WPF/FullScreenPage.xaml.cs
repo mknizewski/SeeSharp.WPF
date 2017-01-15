@@ -1,6 +1,7 @@
 ﻿using SeeSharp.Infrastructure;
 using System;
 using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -16,6 +17,15 @@ namespace SeeSharp.WPF
         private MediaViewModel _viewModel;
         private enum ButtonState { Play, Pause, Restart }
         private MediaElement _mediaElement;
+
+        [DllImport("user32.dll")]
+        private static extern int FindWindow(string className, string windowText);
+
+        [DllImport("user32.dll")]
+        private static extern int ShowWindow(int hwnd, int command);
+
+        private const int SW_HIDE = 0;
+        private const int SW_SHOW = 1;
 
         public FullScreenPage(MediaElement mediaElement)
         {
@@ -154,6 +164,9 @@ namespace SeeSharp.WPF
             this._mediaElement.Position = new TimeSpan(this.media.Position.Ticks);
             this._mediaElement.LoadedBehavior = this.media.LoadedBehavior;
             this._mediaElement.Volume = this.media.Volume;
+
+            int hwnd = FindWindow("Shell_TrayWnd", "");
+            ShowWindow(hwnd, SW_SHOW);
 
             this.Close();
         }

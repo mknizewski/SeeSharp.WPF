@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -30,6 +31,15 @@ namespace SeeSharp.WPF
         private TimeSpan _currentVideoSpan;
         private MediaViewModel _viewModel;
         private bool _isFullScreen;
+
+        [DllImport("user32.dll")]
+        private static extern int FindWindow(string className, string windowText);
+
+        [DllImport("user32.dll")]
+        private static extern int ShowWindow(int hwnd, int command);
+
+        private const int SW_HIDE = 0;
+        private const int SW_SHOW = 1;
 
         private enum ButtonState { Play, Pause, Restart }
 
@@ -364,6 +374,9 @@ namespace SeeSharp.WPF
 
             ViewFactory.CurrentPosition = this.media.Position;
             FullScreenPage fullScreen = new FullScreenPage(this.media);
+
+            int hwnd = FindWindow("Shell_TrayWnd", "");
+            ShowWindow(hwnd, SW_HIDE);
 
             fullScreen.Show();
         }
