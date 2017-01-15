@@ -362,16 +362,10 @@ namespace SeeSharp.WPF
             WindowPage page = (WindowPage)App.Current.MainWindow;
             MainPage root = page.MainPage;
 
-            if (_isFullScreen)
-            {
-                page.WindowState = WindowState.Normal;
-                page.WindowStyle = WindowStyle.SingleBorderWindow;
-            }
-            else
-            {
-                page.WindowState = WindowState.Maximized;
-                page.WindowStyle = WindowStyle.None;
-            }
+            ViewFactory.CurrentPosition = this.media.Position;
+            FullScreenPage fullScreen = new FullScreenPage(this.media);
+
+            fullScreen.Show();
         }
 
         private void ProgramDownloadLink_Click(object sender, RoutedEventArgs e)

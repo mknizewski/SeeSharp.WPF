@@ -79,7 +79,7 @@ namespace SeeSharp.BOL.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 1.1.
+        ///   Looks up a localized string similar to 1.2.
         /// </summary>
         internal static string AppVersion {
             get {

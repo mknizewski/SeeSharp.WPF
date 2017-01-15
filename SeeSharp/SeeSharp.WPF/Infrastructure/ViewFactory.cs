@@ -1,12 +1,13 @@
 ﻿using SeeSharp.BO.Managers;
 using SeeSharp.WPF;
+using System;
 using System.Windows.Controls;
 
 namespace SeeSharp.Infrastructure
 {
     public static class ViewFactory
     {
-        public static MainPage MainPage;
+        public static TimeSpan CurrentPosition;
 
         public static UserControl GetView(ViewType viewType)
         {
