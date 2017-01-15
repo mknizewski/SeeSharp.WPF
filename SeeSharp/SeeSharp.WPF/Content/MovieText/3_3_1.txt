@@ -1,0 +1,5 @@
+Delegaty są to nowe typy danych, które mogą być zadeklarowane w klasie jako typ zagnieżdżony lub poza nią. Delegaty deklarujemy jak nowe metody lecz, aby zadeklarować delegat należy dodatkowo użyć słowo kluczowe delegate (tuż przed zadeklarowanym typem metody delegata).
+
+Delegaty nie posiadają implementacji, jedynie nagłówek zakończony znakiem średnika. Delegata musi zwracać i przyjmować dokładnie takie same typy i ilości zmiennych. Pod delegata można praktycznie podpiąć każdą metodę, która niczego nie zwraca (przyjmując przy tym typ tekstowy string).
+
+Nagłówek określają parametry delegatu oraz typ zwrotny.

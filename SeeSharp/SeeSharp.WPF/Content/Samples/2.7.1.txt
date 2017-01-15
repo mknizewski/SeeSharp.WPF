@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Hermetyzacja_public
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Pokój pok1 = new Pokój();
+            pok1.długość = 12.5;
+            pok1.szerokość = 3.5;
+            pok1.rodzaj = "dwuosobowy";
+            pok1.umeblowany = false;
+            pok1.WyswietlDane();
+            Console.ReadKey();
+        }
+    }   
+
+    class Pokój
+    {
+        public double długość;
+        public double szerokość;
+        public bool umeblowany;
+        public string rodzaj;
+
+        public double ObliczMetraz()
+        {
+            return długość * szerokość;
+        }
+
+        public void WyswietlDane()
+        {
+            Console.WriteLine("Metraż pokoju: {0}", ObliczMetraz());
+            Console.WriteLine("Rodzaj pokoju: {0}", rodzaj);
+            if (umeblowany == true)
+                Console.WriteLine("Pokój umeblowany");
+            else
+                Console.WriteLine("Pokój nieumeblowany");
+        }
+    }
+}

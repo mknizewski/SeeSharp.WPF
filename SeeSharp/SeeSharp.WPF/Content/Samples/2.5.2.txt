@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Petla_for
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+             for (int i = 0; i < 10; i++)
+             {
+                 Console.Write("{0} ", i);
+             }
+             Console.Write(Environment.NewLine);
+
+            for (int i = 9; i >=0; i--)
+            {
+                Console.Write("{0} ", i);
+            }
+            Console.Write(Environment.NewLine);
+
+            string end;
+            for (;;)
+            {
+                Console.Write("Podaj q aby zakończyć pętle... ");
+                end = Console.ReadLine();
+                if (end == "q")
+                    break;
+            }
+            Console.ReadKey();
+        }
+    }
+}

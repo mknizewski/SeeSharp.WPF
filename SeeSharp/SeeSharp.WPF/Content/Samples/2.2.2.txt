@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Rzutowanie
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double d = 4.355;
+            int c = (int)d;
+            Console.WriteLine("{0}", c);
+
+            string text = "1010";
+            int liczba = int.Parse(text) + 1;
+            Console.WriteLine("{0}", liczba);
+
+            text = liczba.ToString() + 2;
+            Console.WriteLine("{0}", text);
+
+            liczba = 1;
+            bool logika = Convert.ToBoolean(liczba);
+            Console.WriteLine("{0}", logika);
+            Console.ReadKey();
+        }
+    }
+}

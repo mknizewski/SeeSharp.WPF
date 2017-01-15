@@ -1,0 +1,6 @@
+Wyrażenia lambda umożliwiają tworzenie anonimowych funkcji które posiadają ciało, lecz nie posiadają swojej nazwy. Wyrażenie lambda w dużym stopniu zapewniają wygodę dla programisty, ponieważ:
+- typ parametru nie musi być podawany;
+- jeśli podawany jest jeden parametr to nawiasy () nie muszą występować;
+- jeśli jedyną instrukcją jest return to możemy pominąć nawiasy klamrowe {};
+
+Podstawowa składnia: (parametry) => {zwracana wartość}

@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace tablica_jednowymiarowa
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] tab = new int[5];
+            tab[0] = 5;
+            tab[1] = 3;
+            tab[2] = 10;
+            tab[3] = 7;
+            tab[4] = 22;
+
+            int[] tab2 = { 5, 3, 10, 7, 22 };
+
+            int[] tab3;
+            int size;
+            Console.Write("Podaj rozmiar tablicy: ");
+            size = int.Parse(Console.ReadLine());
+            tab3 = new int[size];
+            for(int i = 0; i < tab3.Length; i++)
+            {
+                Console.Write("Podaj wartość elementu tab3[{0}]: ", i);
+                tab3[i] = int.Parse(Console.ReadLine());
+            }
+
+            foreach (int i in tab3)
+            {
+                Console.Write("{0} ", i);
+            }
+            Console.ReadKey();
+        }
+    }
+}

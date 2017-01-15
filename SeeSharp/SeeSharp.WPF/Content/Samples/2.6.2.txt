@@ -1,0 +1,49 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Tablica_dwuwymiarowa
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[,] tablica2wym = {
+                                     {12, 32, 24, 245, 32},
+                                     {35, 36, 39, 87, 62},
+                                     {92, 57, 95, 45, 38},
+                                     {0, 100, 99, 42, 38}
+                                 };
+            Console.WriteLine(tablica2wym[2, 3]);
+
+            int row, col;
+            int[,] tab2wym;
+            Console.Write("Podaj ilość wierszy: ");
+            row = int.Parse(Console.ReadLine());
+            Console.Write("Podaj ilość kolumn: ");
+            col = int.Parse(Console.ReadLine());
+            tab2wym = new int[row, col];
+            
+            for (int i = 0; i < row; i++)
+            {
+                for (int j = 0; j < col; j++)
+                {
+                    Console.Write("tab2wym[{0}, {1}] = ", i, j);
+                    tab2wym[i, j] = int.Parse(Console.ReadLine());
+                }
+            }
+
+            for (int i = 0; i < row; i++)
+            {
+                Console.Write("Wiersz {0})\t", i);
+                for (int j = 0; j < col; j++)
+                {
+                    Console.Write("{0} ", tab2wym[i, j]);
+                }
+                Console.Write(Environment.NewLine);
+            }
+            Console.ReadKey();
+        }
+    }
+}

@@ -1,0 +1,7 @@
+W celu napisania pierwszego programu “Hello world” w języku C# należy stworzyć nowy projekt poprzez wybór opcji kolejno File, New, Project następnie wybór opcji “Console Application”. W następnej kolejności nazywamy nasz projekt w polu “Name” i wybieramy lokalizację zapisu projektu w polu “Location”.
+
+Pierwszym programem w kursie będzie napisanie programu polegającego na wyświetlaniu tekstu “Hello World” na ekranie monitora przy użyciu komendy Console.WriteLine();
+
+Kompilujemy i następnie uruchamiamy program poprzez kliknięcie klawisza F5 lub wybór opcji “Start” z zieloną strzałką z panelu górnego.
+
+Należy pamiętać, aby móc wyświetlić skompilowany program należy również wpisać Console.Readkey() w ostatniej linii programu w bloku “Main”.  

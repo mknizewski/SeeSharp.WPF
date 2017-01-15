@@ -1,0 +1,7 @@
+Pętle są instrukcjami pozwalającymi na cykliczne wykonywanie tego samego fragmentu kodu. Głównie pętle wykorzystujemy do wykonywania określonych sekwencji bloków kodu, które chcemy wykonać wielokrotnie, przykładowo przy obróbce kolejnych serii danych. 
+
+Pętla while powoduje wykonywania wyrażenia tak długo, dopóki rezultat wyrażenia logicznego zawartego w nawiasach klamrowych while jest prawdziwy (true). Wyrażenie stanowi sekwencję kodu ograniczoną nawiasami klamrowymi.
+
+Gdy warunek będzie zwracał fałsz (false), wtedy program automatycznie wyjdzie z bloku pętli while i będzie wykonywać kolejne komendy zapisane po tym bloku.
+
+Pętla do while() w przeciwieństwie do zwykłej pętli while() sprawdza warunek na końcu pętli. Pętla do while() zawsze zostanie wykonana co najmniej raz.

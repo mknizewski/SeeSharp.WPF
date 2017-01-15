@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="SeeSharp.WPF.AchivmentItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:SeeSharp.WPF"
+             mc:Ignorable="d"
+             d:DesignHeight="100" d:DesignWidth="400" Margin="0 0 0 0">
+    <Grid x:Name="LayoutRoot">
+        <Border BorderBrush="Blue" BorderThickness="2" CornerRadius="10" Margin="10 10 10 10" Background="White">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="3*" />
+                </Grid.ColumnDefinitions>
+                <Image HorizontalAlignment="Left" x:Name="ImageAchiv" MaxWidth="100" MaxHeight="100" Grid.Column="0" Source="Images/Achivments/ObiektowyJanusz.png" Width="auto" Height="auto" Margin="10 10 10 10"></Image>
+                <StackPanel Grid.Column="1" Orientation="Vertical" VerticalAlignment="Center">
+                    <TextBlock x:Name="TitleText" FontSize="24" HorizontalAlignment="Center" FontFamily="Open Sans">Tytuł osiągnięcia</TextBlock>
+                    <TextBlock x:Name="DetialText" FontSize="16" HorizontalAlignment="Center" FontFamily="Open Sans">Szczegóły osiągnięcia</TextBlock>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

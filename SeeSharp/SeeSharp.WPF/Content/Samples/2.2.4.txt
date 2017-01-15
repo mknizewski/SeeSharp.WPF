@@ -1,0 +1,24 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace format_liczb
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int Moja_liczba = 2016;
+            Console.WriteLine("Samochód kosztuje {0:C}", Moja_liczba);
+            Console.WriteLine("Zapis wykładniczy {0:E}", Moja_liczba);
+            Console.WriteLine("Liczba dziesiętna (7 cyfrowa) {0:D7}", Moja_liczba);
+            Console.WriteLine("Osiem miejsc po przecinku {0:F8}", Moja_liczba);
+            Console.WriteLine("Cztery miejsca po przecinku {0:F4}", Moja_liczba);
+            Console.WriteLine("System szesnastkowy {0:X}", Moja_liczba);
+            Console.WriteLine("Dzisiaj jest dzień {0:d} o godzinie {0:t}", DateTime.Now);
+
+            Console.ReadKey();
+        }
+    }
+}

@@ -1,0 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Petla_foreach
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] tablica = { 0, 1, 2, 3, 4 };
+            foreach (int i in tablica)
+            {
+                Console.Write("{0} ", i);
+            }
+            Console.ReadKey();
+        }
+    }
+}

@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace petla_while
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string haslo = "";
+            while (haslo != "pass")
+            {
+                Console.Write("Podaj hasło dostępu do konta: ");
+                haslo = Console.ReadLine();
+            }
+            Console.WriteLine("Przyznano dostęp do konta");
+
+            string odp = "";
+            while (true)
+            {
+                Console.Write("Wyjść z pętli? [y/n] ");
+                odp = Console.ReadLine();
+                if (odp == "y" || odp == "Y")
+                    break;
+            }
+            Console.WriteLine("Zakończono pętlę");
+
+            bool warunek = false;
+            string zapetlanie = "";
+            do
+            {
+                Console.Write("Wyświetlić ten napis jeszcze raz? [y/n] ");
+                zapetlanie = Console.ReadLine();
+                if (zapetlanie == "y" || zapetlanie == "Y")
+                    warunek = true;
+                else
+                    warunek = false;
+            } while (warunek);
+            Console.ReadKey();
+        }
+    }
+}

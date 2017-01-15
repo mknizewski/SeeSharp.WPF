@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace pola_i_wlasciwosci
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Student stud1 = new Student();
+            stud1.Nr_indexu = 13579;
+            Console.WriteLine(stud1.Nr_indexu);
+            Console.ReadKey();
+        }
+    }
+
+    class Student
+    {
+        private int _nr_indexu;
+        public int Nr_indexu
+        {
+            get { return _nr_indexu; }
+            set { _nr_indexu = value; }
+        }
+    }
+}

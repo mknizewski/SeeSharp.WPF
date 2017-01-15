@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Plytka_kopia
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Liczba a = new Liczba(); //tworze pierwszy nowy obiekt klasy liczba o nazwie a
+            a.cyfra = 2016;  //ustawiamy wartość dla pola cyfra 
+
+            Liczba b = new Liczba(); //tworze drugi nowy obiekt klasy liczba o nazwie b
+            b = (Liczba)a.Clone(); //kopia zawartości obiektu a do obiektu b czyli wykonanie kopii płytkiej obiektu a do obiektu b
+
+            Console.WriteLine(b.cyfra); // wypisywanie na ekran zawartości pola obiektu b
+            a.cyfra = 100; // zmieniam wartość pola cyfra dla obiektu a, aby adres obiektu był inny
+            Console.WriteLine(b.cyfra); // wypisywanie ponownie na ekran zawartości pola obiektu b
+
+            if (a.Equals(b)) // cały if else sprawdza czy adresy obu obiektów są takie same tzn czy referencje odwołują się do tego samego obiektu
+                Console.WriteLine("Referencje odwołują się do tego samego obiektu");
+            else
+                Console.WriteLine("Referencje nie odwołują się do tego samego obiektu");
+
+            Console.ReadKey();
+        }
+    } 
+
+    class Liczba : ICloneable //tworzymy klase liczba która dziedziczy po interfejsie ICloneable
+    {
+        public int cyfra; // definicja pola/pól znajdujących się w klasie
+
+        public Object Clone() //implementacja metody Clone która zwróci zawartość obiektu
+        {
+            return MemberwiseClone();// metoda niezbędna do wykonania płytkiej kopii
+        }
+    }
+}

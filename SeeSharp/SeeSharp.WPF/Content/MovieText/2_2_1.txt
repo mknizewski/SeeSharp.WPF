@@ -1,0 +1,19 @@
+C sharp ma do zaoferowania wiele typów zmiennych, które mogą być wykorzystane przez nas w programie. Typy dzielimy na dwa rodzaje. Pierwszym z typów są typy skalarne, które przechowuje wartości na stosie. Podstawowymi typami skalarnymi są między innymi:
+Liczby całkowite:
+- byte - liczba bez znaku (8 bitowa);
+- sbyte - liczba ze znakiem (8 bitowa);
+- short - liczba ze znakiem (16 bitowa);
+- int - liczba ze znakiem (32 bitowa);
+- long - liczba ze znakiem (64 bitowa).
+
+Liczby zmiennoprzecinkowe:
+- float - liczba pojedynczej precyzji;
+- double - liczba podwójnej precyzji;
+- decimal - liczba stałej precyzji.
+
+Pozostałe typy:
+- string - ciąg znaków Unicode;
+- char - znak Unicode;
+- bool - wartość logiczna. 
+
+Istnieją również typy referencyjne, które przechowują na stosie adres do wartości na stercie. Podczas gdy na daną wartość wskazuje kilka zmiennych typu referencyjnego to zmiana wartości wpływa na każdą ze zmiennych.

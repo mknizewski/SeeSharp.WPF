@@ -1,0 +1,7 @@
+Operatorem określamy jeden lub kilka znaków, które są wykorzystywane w języku programowania na każdym kroku. 
+
+Operatory logiczne służą do łączenia wyrażeń będących w relacji:
+- Suma warunków (|| - lub [OR]) - zwraca true jeśli chociaż jeden warunek jest prawdziwy;
+- Iloczyn warunków (&& - i [AND]) - zwraca true jeśli oba warunki są prawdziwe; 
+- Negacja warunku (! - nie [NOT]) - zmienia true na false i na odwrót;
+- Alternatywa wykluczająca warunku (^ - EXCLUSIVE-OR) - zwróci true jeśli tylko jeden warunek jest prawdziwy.

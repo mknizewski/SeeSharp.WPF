@@ -1,0 +1,47 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+
+namespace Delegaty
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            klawisz zamykanie; //tworzymy obiekt klasy delegata
+            //uzytkownik podaje czas
+            Console.Write("Podaj czas: "); 
+            int czas = int.Parse(Console.ReadLine()); //pobranie liczby z klawiatury
+
+            if (czas == 0) //jesli czas podany przez uzytkownika =0 to Zamknij (wywyloanie metody)
+                zamykanie = Zamknij;
+            else //jesli czas podany przez uzytkownika różny 0 to Wylacz (wywyloanie metody)
+                zamykanie = Wylacz;
+
+            Komunikat(czas, zamykanie); //wykonanie funkcji która została zapisane w delegacie
+            Console.ReadKey();
+        }
+
+        public delegate void klawisz(string komunikat); //deklaracja metody delegata, nie zwraca niczego
+
+        static void Zamknij(string info) //metoda która będzie wywoływana gdy czas będzie równy 0
+        {
+            Console.WriteLine("Zamykam program\n" + info);
+        }
+
+        static void Wylacz(string info) //metoda która będzie wywoływana gdy czas bedzie >0 różny
+        {
+            Console.WriteLine("Wyłączam komputer\n" + info);
+        }
+
+        //deklaracja funkcji delegata pobierająca ilość sekund oraz delegata
+        public static void Komunikat(int sek, klawisz delegata)
+        {
+            delegata("Pozostało jeszcze " + sek + " sekund"); //wypisuje na ekran ile sekund pozostało do końca
+            Thread.Sleep(sek * 1000); //* 1000 bo zmienna sek jest w milisekundach, uśpienie programu na tyle właśnie sekund
+            Console.WriteLine("Koniec"); //uśpienie zakończone i wypisanie na ekran że koniec
+        }
+    }
+}

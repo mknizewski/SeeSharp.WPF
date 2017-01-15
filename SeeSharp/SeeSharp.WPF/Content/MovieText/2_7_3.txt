@@ -1,0 +1,11 @@
+Metoda to inaczej funkcja, lecz znajdująca się na obszarze klasy. 
+Metoda jest to grupa poleceń, która ma wykonywać pewne, określone działanie. Każdy program w języku C# posiada co najmniej jedną klasę z metodą nazwaną Main().
+
+Aby użyć metody należy ją początkowo zdefiniować w klasie i następnie wywołać przykładowo w Main().
+
+Podczas definiowania metody należy określić elementy jej struktury:
+- modyfikator dostępu (hermetyzacja) - widoczność zmiennej lub metody;
+- zwracany typ - określenie rodzaju wartości zwracanej przez metodę;
+- nazwa metody - określenie nazwy metody, która powinna być unikalna (nie może być identyczna z pozostałymi identyfikatorami zdefiniowanymi w obrębie danej klasy);
+- lista parametrów - parametry powinny być umieszczone w nawiasie. Pozwalają one na przekazywanie oraz zwracanie wartości z danej metody;
+- wnętrze metody - zawiera zestaw poleceń koniecznych do prawidłowego działania metody.

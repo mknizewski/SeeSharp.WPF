@@ -1,0 +1,186 @@
+﻿<UserControl x:Class="SeeSharp.WPF.MainPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SeeSharp.WPF"
+        mc:Ignorable="d"
+        d:DesignHeight="1000" d:DesignWidth="1600">
+    <Grid x:Name="LayoutRoot" Background="White" KeyUp="LayoutRoot_KeyUp">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" MaxWidth="250" />
+                <ColumnDefinition Width="4*" />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="75" />
+                    <RowDefinition Height="5*" />
+                    <RowDefinition Height="2*" />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Background="#FF9C6EA0" Cursor="Hand" MouseLeftButtonDown="Grid_MouseLeftButtonDown">
+                    <Viewbox HorizontalAlignment="Left" MaxWidth="50" MaxHeight="50" Margin="5 0 0 0">
+                        <Image Source="Images/person-flat.png" />
+                    </Viewbox>
+                    <Viewbox StretchDirection="DownOnly" Stretch="Uniform" HorizontalAlignment="Right" Margin="0 0 5 0">
+                        <TextBlock x:Name="LoginName" HorizontalAlignment="Right" Width="auto" Height="auto" FontSize="22" TextWrapping="Wrap" Text="Niezalogowany" Margin="50 0 0 0" VerticalAlignment="Center" FontFamily="Open Sans" />
+                    </Viewbox>
+                </Grid>
+                <Grid Grid.Row="1" Background="#FF5E6183">
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 15 0 0">
+                        <Grid Margin="0 0 0 10" x:Name="WelcomePageButtonMenu" Visibility="Visible">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="2*" />
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0" Source="Images/Interface/browser.png" HorizontalAlignment="Left" Margin="0 0 15 0" Width="auto" Height="auto" />
+                            <Button Click="WelcomePageButtonMenuButton_Click"  Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="auto" MinWidth="150" MinHeight="50" Height="auto" Content="Strona Główna" BorderThickness="0" Cursor="Hand" FontFamily="Open Sans" FontSize="16" FontWeight="Bold" Foreground="Black" Background="#FF0B68D8">
+                                <Button.Effect>
+                                    <DropShadowEffect />
+                                </Button.Effect>
+                                <Button.BorderBrush>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFA3AEB9" Offset="0" />
+                                        <GradientStop Color="#FF8399A9" Offset="0.375" />
+                                        <GradientStop Color="#FF718597" Offset="0.375" />
+                                        <GradientStop Color="#FF90CAFF" Offset="1" />
+                                    </LinearGradientBrush>
+                                </Button.BorderBrush>
+                            </Button>
+                        </Grid>
+                        <Grid Margin="0 0 0 10" x:Name="RegisterButtonMenu">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="2*" />
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0" Source="Images/Interface/pencil.png" HorizontalAlignment="Left" Margin="0 0 15 0" Width="auto" Height="auto" />
+                            <Button Click="RegisterButton_Click" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="auto" MinWidth="150" MinHeight="50" Height="auto" Content="Rejestracja" BorderThickness="0" Cursor="Hand" FontFamily="Open Sans" FontSize="16" FontWeight="Bold" Foreground="Black" Background="#FF0B68D8">
+                                <Button.Effect>
+                                    <DropShadowEffect />
+                                </Button.Effect>
+                                <Button.BorderBrush>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFA3AEB9" Offset="0" />
+                                        <GradientStop Color="#FF8399A9" Offset="0.375" />
+                                        <GradientStop Color="#FF718597" Offset="0.375" />
+                                        <GradientStop Color="#FF90CAFF" Offset="1" />
+                                    </LinearGradientBrush>
+                                </Button.BorderBrush>
+                            </Button>
+                        </Grid>
+                        <Grid Margin="0 0 0 10" x:Name="LoginButtonMenu">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="2*" />
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0" Source="Images/Interface/cursor.png" HorizontalAlignment="Left" Margin="0 0 15 0" Width="auto" Height="auto" />
+                            <Button Grid.Column="1" HorizontalAlignment="Center" Click="Login_Click" VerticalAlignment="Center" Width="auto" MinWidth="150" MinHeight="50" Height="auto" Content="Zaloguj się" BorderThickness="0" Cursor="Hand" FontFamily="Open Sans" FontSize="16" FontWeight="Bold" Foreground="Black" Background="#FF0B68D8">
+                                <Button.Effect>
+                                    <DropShadowEffect />
+                                </Button.Effect>
+                                <Button.BorderBrush>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFA3AEB9" Offset="0" />
+                                        <GradientStop Color="#FF8399A9" Offset="0.375" />
+                                        <GradientStop Color="#FF718597" Offset="0.375" />
+                                        <GradientStop Color="#FF90CAFF" Offset="1" />
+                                    </LinearGradientBrush>
+                                </Button.BorderBrush>
+                            </Button>
+                        </Grid>
+                        <Grid Margin="0 0 0 10" Visibility="Collapsed">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="2*" />
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0" Source="Images/Interface/earth-globe.png" HorizontalAlignment="Left" Margin="0 0 15 0" Width="auto" Height="auto" />
+                            <Button Grid.Column="1" Click="AboutCourse_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Width="auto" MinWidth="150" MinHeight="50" Height="auto" Content="O kursie" BorderThickness="0" Cursor="Hand" FontFamily="Open Sans" FontSize="16" FontWeight="Bold" Foreground="Black" Background="#FF0B68D8">
+                                <Button.Effect>
+                                    <DropShadowEffect />
+                                </Button.Effect>
+                                <Button.BorderBrush>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFA3AEB9" Offset="0" />
+                                        <GradientStop Color="#FF8399A9" Offset="0.375" />
+                                        <GradientStop Color="#FF718597" Offset="0.375" />
+                                        <GradientStop Color="#FF90CAFF" Offset="1" />
+                                    </LinearGradientBrush>
+                                </Button.BorderBrush>
+                            </Button>
+                        </Grid>
+                        <Grid Margin="0 0 0 10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="2*" />
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0" Source="Images/Interface/group.png" HorizontalAlignment="Left" Margin="0 0 15 0" Width="auto" Height="auto" />
+                            <Button Click="AboutAuthors_Click" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="auto" MinWidth="150" MinHeight="50" Height="auto" Content="Autorzy" BorderThickness="0" Cursor="Hand" FontFamily="Open Sans" FontSize="16" FontWeight="Bold" Foreground="Black" Background="#FF0B68D8">
+                                <Button.Effect>
+                                    <DropShadowEffect />
+                                </Button.Effect>
+                                <Button.BorderBrush>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFA3AEB9" Offset="0" />
+                                        <GradientStop Color="#FF8399A9" Offset="0.375" />
+                                        <GradientStop Color="#FF718597" Offset="0.375" />
+                                        <GradientStop Color="#FF90CAFF" Offset="1" />
+                                    </LinearGradientBrush>
+                                </Button.BorderBrush>
+                            </Button>
+                        </Grid>
+                        <Grid Margin="0 0 0 10" x:Name="LogOutButtonMenu" Visibility="Collapsed">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="2*" />
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0" Source="Images/Interface/cancel.png" HorizontalAlignment="Left" Margin="0 0 15 0" Width="auto" Height="auto" />
+                            <Button Click="LogOut_Click" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="auto" MinWidth="150" MinHeight="50" Height="auto" Content="Wyloguj się" BorderThickness="0" Cursor="Hand" FontFamily="Open Sans" FontSize="16" FontWeight="Bold" Foreground="Black" Background="#FF0B68D8">
+                                <Button.Effect>
+                                    <DropShadowEffect />
+                                </Button.Effect>
+                                <Button.BorderBrush>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFA3AEB9" Offset="0" />
+                                        <GradientStop Color="#FF8399A9" Offset="0.375" />
+                                        <GradientStop Color="#FF718597" Offset="0.375" />
+                                        <GradientStop Color="#FF90CAFF" Offset="1" />
+                                    </LinearGradientBrush>
+                                </Button.BorderBrush>
+                            </Button>
+                        </Grid>
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Row="2" Background="#FF5E6183">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="3*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Viewbox Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Top" x:Name="ProgressTextViewBox" Visibility="Collapsed">
+                        <TextBlock Text="Postęp ukończenia:" Margin="0 20 0 0" FontFamily="Open Sans" FontSize="24"></TextBlock>
+                    </Viewbox>
+                    <Viewbox Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" x:Name="ProgressPercentageViewBox" Visibility="Collapsed">
+                        <TextBlock x:Name="ProgressPercentageTextBlock" FontFamily="Open Sans" FontSize="24" />
+                    </Viewbox>
+                </Grid>
+            </Grid>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="75" />
+                    <RowDefinition Height="5*" />
+                    <RowDefinition Height="25" />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Background="#FFF1F1F1">
+                    <Viewbox StretchDirection="DownOnly" Stretch="Uniform">
+                        <TextBlock Text="Przewodnik po .NET" FontFamily="Open Sans" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                    </Viewbox>
+                </Grid>
+                <ContentControl Grid.Row="1" x:Name="DynamicView" Background="#FFF1F1F1"></ContentControl>
+                <Grid Grid.Row="2" Background="#FF2D3370">
+                    <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Text="Wersja: 0.01" x:Name="AppVersion" Margin="5 0 0 0" />
+                    <TextBlock Margin="0 0 15 0" x:Name="SectionBlock" Text="Jesteś w sekcji: " Foreground="White" FontFamily="Open Sans" FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Center"></TextBlock>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

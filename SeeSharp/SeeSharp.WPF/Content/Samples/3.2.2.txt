@@ -1,0 +1,62 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Kopia_gleboka
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Liczba obiekt1 = new Liczba(); //tworze pierwszy obiekt klasy liczba o nazwie obiekt1
+            obiekt1.cyfra = 2016; //ustawiamy wartość pola cyfra dla obiektu1
+
+            Liczba obiekt2 = new Liczba(); //tworze drugi obiekt klasy liczba o nazwie obiekt2
+            obiekt1.objKlasySlowo.slowo = "ciąg znaków"; // ustawiam zawartość pierwszego obiektu
+
+            obiekt2 = obiekt1.GlebokaKopia(); //kopia obiektu 1 do obiektu2 za pomocą metody GlebokaKopia
+
+            //Wypisanie zawartości pól znajdujących się w obiekcie 2 po to aby sprawdzić czy prawidłowo wykonała się głęboka kopia:
+            Console.WriteLine("Obiekt drugi klasy Liczba to: " + obiekt2.cyfra); 
+            Console.WriteLine("Obiekt drugi klasy Slowo to: " + obiekt2.objKlasySlowo.slowo);
+
+            //Sprawdzenie czy referencje obu obiektów pola objKlasySłowo są takie same
+            if (Object.ReferenceEquals(obiekt1.objKlasySlowo, obiekt2.objKlasySlowo))
+                Console.WriteLine("Referencje odwołują się do tego samego obiektu");
+            else
+                Console.WriteLine("Referencje nie odwołują się do tego samego obiektu");
+
+            Console.ReadKey();
+        }
+    }
+
+    class Slowo
+    {
+        public string slowo;
+    }
+
+    class Liczba
+    {
+        public int cyfra;
+        public Slowo objKlasySlowo; //pole referencyjne odwołujące się do pola klasy Slowo. 
+                                    //W tym przypadku kopia plytka nie pomoże. Skopiuje się zawartość pola z obiektu1
+                                    //do obiektu 2 lecz oba obiekty będą odwoływać się do tego samego adresu
+        
+        public Liczba() //konstruktor domyślny który ustawia zawartość pola objKlasySlowo poprzez utworzenie 
+                        //obiektu klasy Slowo
+        {
+            objKlasySlowo = new Slowo();
+        }
+
+        public Liczba GlebokaKopia() //zadeklarowanie wlasnej metody GlebokaKopia, w przypadku gdy w plytkiej kopii
+                                     //zwracalismy ogólny typ obiektu to w własnej zdefiniowanej metodzie zwracamy
+                                     //obiekt klasy liczba
+        {
+            Liczba temp = new Liczba();
+            temp.cyfra = this.cyfra;
+            temp.objKlasySlowo.slowo = this.objKlasySlowo.slowo;
+            return temp;
+        }
+    }
+}

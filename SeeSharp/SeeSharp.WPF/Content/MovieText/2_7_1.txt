@@ -1,0 +1,9 @@
+Hermetyzacja jest to kontrolowany dostęp do wnętrza istniejącej klasy. Polega na ukrywaniu pewnych danych składowych lub metod danej klasy, tak aby były one dostępne tylko metodom wewnętrznym danej klasu lub innym uprawnionym.
+
+Hermetyzację umożliwiają modyfikatory dostępu tj:
+- public - brak ograniczeń. Składowe klasy oznaczone tym modyfikatorem są dostępne dla wszystkich metod ze wszystkich klas;
+- private - składowe, które są dostępne tylko w obrębie własnej klasy; 
+- protected - składowe chronione dostępne na poziomie danej klasy, w której znajdują się oraz klas dziedziczących po klasie bazowej;
+- internal - składowe wewnętrzne są dostępne dla klasy znajdującej się w danej bibliotece;
+- protected internal - składowe chronione dostępne na poziomie danej klasy, w której znajdują się oraz klas dziedziczących po klasie bazowej tylko w obrębie danej biblioteki.
+

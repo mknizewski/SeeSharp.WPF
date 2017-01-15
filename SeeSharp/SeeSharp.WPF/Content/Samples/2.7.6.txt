@@ -1,0 +1,46 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Konstruktory
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Student stud = new Student("Jan", "Kowalski", 1992, 13579, 4.5);
+            stud.WypiszWiekStudenta();
+            stud.WypiszSrednia();
+            Console.ReadKey();
+        }
+    }
+
+    class Student
+    {
+        public string imie;
+        public string nazwisko;
+        public int nr_indeksu;
+        public int rok_urodzenia;
+        public double srednia;
+
+        public void WypiszWiekStudenta()
+        {
+            Console.WriteLine("{0} {1} ma {2} lata", imie, nazwisko, 2016 - rok_urodzenia);
+        }
+
+        public void WypiszSrednia()
+        {
+            Console.WriteLine("Student o numerze indeksu {0} ma średnią {1}", nr_indeksu, srednia);
+        }
+
+        public Student(string i, string n, int rok, int nr_ind, double s)
+        {
+            imie = i;
+            nazwisko = n;
+            rok_urodzenia = rok;
+            nr_indeksu = nr_ind;
+            srednia = s;
+        }
+    }
+}  

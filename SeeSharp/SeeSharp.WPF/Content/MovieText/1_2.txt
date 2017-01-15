@@ -1,0 +1,8 @@
+W naszym kursie będziemy korzystać właśnie z języka C#, który oczywiście jest wspierane przez nasze środowisko programistyczne, czyli Microsoft Visual Studio
+
+Definicja:
+C# jest językiem programowania opracowanym przez firmę Microsoft. Jego głównym twórcą jest Anders Hejlsberg – inżynier oprogramowania znany z pracy nad Turbo Pascalem.
+
+C# łączy w sobie to, co najlepsze z języków Java, C oraz C++. Składnia języka podobna jest do tej z C++, zaś samo działanie programów przypomina mechanizm Javy (jest to wirtualizacja). 
+
+Powyższy wstęp miał za zadanie pokazać Ci, na czym będzie polegać praca z C Sharpem, dlaczego jest on ciekawy i jak wiele możliwości ze sobą niesie. W kolejnej części kursu zapoznasz się ze środowiskiem Microsoft Visual Studio 2015. W dalszej kolejności skupimy się już konkretnie na nauce języka C#.

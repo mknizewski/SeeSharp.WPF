@@ -1,0 +1,8 @@
+Operatorem określamy jeden lub kilka znaków, które są wykorzystywane w języku programowania na każdym kroku. 
+
+Operatorem arytmetycznym nazywamy operator służący do wykonywania prostych działań matematycznych:
+- Operator dodawania (+);
+- Operator odejmowania (-);
+- Operator mnożenia (*);
+- Operator dzielenia (/);
+- Operator reszty z dzielenia (%).

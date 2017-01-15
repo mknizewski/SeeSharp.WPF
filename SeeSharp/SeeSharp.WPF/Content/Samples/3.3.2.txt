@@ -1,0 +1,24 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Typy_generyczne
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] tab = { "Jan", "Józef", "Zbyszek", "Damian", "Kazimierz" }; //tworzenie jednowymiarowej tablicy znakow/tekstowej i wypelnienie jej wartosciami
+            Stack<string> stos = new Stack<string>(); //deklaracja stosu przechowujacej dane typu string/tekstowe
+
+            foreach (string obj in tab) //dopoki cos znajduje sie w tablicy
+                stos.Push(obj); //to wykonanie metody push do stosu czyli kladziemy wartosci z tablicy jednowymiarowej na wierzch stosu
+
+            while (stos.Count > 0) //dopoki cos znajduje sie na stosie
+                Console.WriteLine(stos.Pop());  //to zdejmij ze stosu element przy pomocy metody Pop i wypisz jego wartość go na ekran
+
+            Console.ReadKey();
+        }     
+    }
+}

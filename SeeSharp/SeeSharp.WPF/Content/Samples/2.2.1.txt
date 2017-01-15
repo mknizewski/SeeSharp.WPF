@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Typy_zmiennych
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            bool klamca = false;
+            char znak = 'A';
+            string tekst = "Przykładowy tekst";
+            short x = 12345;
+            int y = 123456789;
+            long z = 1234567890123456;
+            float xx = 1234.43f;
+            double yy = 1234.665;
+
+            Console.WriteLine(klamca + " " + znak + " " + tekst + " " + x + " " + y + " " + z + " " + xx + " " + yy);
+            Console.WriteLine("{0} {1} {2} {3} {4} {5} {6} {7}", klamca, znak, tekst, x, y, z, xx, yy);
+            Console.ReadKey();
+        }
+    }
+}
