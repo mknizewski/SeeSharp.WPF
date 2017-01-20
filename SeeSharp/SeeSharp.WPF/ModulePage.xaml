@@ -10,7 +10,7 @@
         <ScrollViewer x:Name="Scroll" BorderBrush="{x:Null}" BorderThickness="0">
             <StackPanel Orientation="Vertical" x:Name="Stack">
                 <TextBlock x:Name="ModuleTitle" FontFamily="Open Sans" FontSize="32" Text="Title" HorizontalAlignment="Center" />
-                <TextBox x:Name="ModuleTextBox" AcceptsReturn="True" TextWrapping="Wrap" IsReadOnly="True" FontFamily="Open Sans" FontSize="16" Margin="20 10 20 10" />
+                <TextBox TextAlignment="Justify" x:Name="ModuleTextBox" AcceptsReturn="True" TextWrapping="Wrap" IsReadOnly="True" FontFamily="Open Sans" FontSize="16" Margin="20 10 20 10" />
                 <Grid Margin="20 0 20 0" x:Name="ModuleGrid">
                     <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
                         <Grid.RowDefinitions>
