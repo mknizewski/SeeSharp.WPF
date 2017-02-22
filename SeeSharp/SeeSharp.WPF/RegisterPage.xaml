@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:SeeSharp.WPF"
              mc:Ignorable="d"
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="300" d:DesignWidth="400">
     <Grid x:Name="LayoutRoot">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
@@ -28,7 +28,9 @@
                     </Button.Effect>
                 </Button>
             </StackPanel>
-            <TextBlock Visibility="Collapsed" x:Name="RegisterAlert" Text="Pomyślnie zarejestrowano konto o loginie {0}! Twój kod rejestracyjny to: {1}" TextWrapping="Wrap" FontFamily="Open Sans" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" />
+            <TextBlock Visibility="Collapsed" x:Name="RegisterAlert" Text="Pomyślnie zarejestrowano konto o loginie {0}!" TextWrapping="Wrap" FontFamily="Open Sans" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" />
+            <TextBlock Visibility="Collapsed" x:Name="CodeTextBlock" Text="999" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Open Sans" FontSize="42" FontWeight="Bold" />
+            <TextBlock Visibility="Collapsed" x:Name="RemainerTextBlock" Text="Proszę zapamiętać ten kod." HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Open Sans" FontSize="16" FontWeight="Bold" />
         </StackPanel>
     </Grid>
 </UserControl>

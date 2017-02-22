@@ -35,11 +35,11 @@ namespace SeeSharp.WPF
                 if (isRegistered)
                 {
                     this.RegisterAlert.Visibility = Visibility.Visible;
-                    this.RegisterAlert.Text = string.Format(
-                        PageDictionary.SuccesfulRegisterMessagePattern,
-                        loginName,
-                        Environment.NewLine,
-                        generatedNumber);
+                    this.CodeTextBlock.Visibility = Visibility.Visible;
+                    this.RemainerTextBlock.Visibility = Visibility.Visible;
+
+                    this.RegisterAlert.Text = string.Format(this.RegisterAlert.Text, loginName);
+                    this.CodeTextBlock.Text = generatedNumber.ToString();
 
                     this.LoginButton.IsEnabled = true;
                 }
